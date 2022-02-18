@@ -1,0 +1,287 @@
+    1  ls
+    2  cd ..
+    3  ls
+    4  subl .zshrc
+    5  cd code
+    6  cd trybe-exercicios
+    7  ls
+    8  cd m1-fundamentos
+    9  cd b1d3-4_unix_e_bash/unix_tests
+   10  pwd
+   11  history
+   12  cd ..
+   13  cd /
+   14  neofetch
+   15  zsh
+   16  cd ..
+   17  cd gralmeidan
+   18  cd code
+   19  cd trybe-exercicios
+   20  ls
+   21  pwd
+   22  ls
+   23  cd ~
+   24  cd Pictures
+   25  ls
+   26  cd MetodoFanart
+   27  ls
+   28  cd ~
+   29  nvm
+   30  nvm -v
+   31  tail .zshrc
+   32  tail .bashrc
+   33  exit
+   34  nvm -v
+   35  node -v
+   36  subl .zshrc
+   37  ls
+   38  clear
+   39  cd code
+   40  ls
+   41  cd trybe-exercicios
+   42  ls
+   43  cd m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+   44  ls
+   45  ls *.txt
+   46  cat skills2.txt
+   47  cat >> skills2.txt
+   48  cat skills2.txt
+   49  vim .zshrc
+   50  rm --help
+   51  wc -l skills2.txt
+   52  sort skills2.txt | head -3 > top_skills.txt
+   53  ls
+   54  cat top_skills.txt
+   55  cat skills2.txt
+   56  cp phrases.txt phrases2.txt
+   57  cat phrases2.txt
+   58  grep -c
+   59  grep -c br phrases2.txt
+   60  grep -vc br phrases2.txt
+   61  cat >> phrases2.txt
+   62  tail phrases
+   63  tail phrases2.txt
+   64  cat phrases2.txt countries.txt > bunch_of_things.txt
+   65  head bunch_of_things.txt
+   66  tail bunch_of_things.txt
+   67  sort bunch_of_things.txt > bunch_of_things.txt
+   68  cat bunch_of_things.txt
+   69  cat phrases2.txt countries.txt > bunch_of_things.txt
+   70  tail bunch_of_things.txt
+   71  sort > bunch_of_things.txt
+   72  cat bunch_of_things.txt
+   73  cat phrases2.txt countries.txt > bunch_of_things.txt
+   74  sort bunch_of_things.txt | cat > bunch_of_things.txt
+   75  head bunch_of_things.txt
+   76  cat phrases2.txt countries.txt > bunch_of_things.txt
+   77  cat bunch_of_things.txt
+   78  sort bunch_of_things.txt
+   79  sort bunch_of_things.txt | head -5
+   80  sort bunch_of_things.txt | head -20
+   81  sort bunch_of_things.txt | head -100
+   82  cat bunch_of_things.txt
+   83  head bunch_of_things.txt
+   84  sort bunch_of_things.txt | echo
+   85  sort bunch_of_things.txt
+   86  sort < bunch_of_things.txt | echo
+   87  sort < bunch_of_things.txt | head -5
+   88  sort < bunch_of_things.txt 
+   89  sort bunch_of_things.txt
+   90  tail bunch_of_things.txt
+   91  sort bunch_of_things.txt
+   92  sort -o bunch_of_things.txt
+   93  tail bunch_of_things.txt
+   94  sort -o bunch_of_things.txt bunch_of_things.txt
+   95  tail bunch_of_things.txt
+   96  ls -l
+   97  chmod +rw bunch_of_things.txt
+   98  ls -l
+   99  chmod
+  100  chmod -rw bunch_of_things.txt
+  101  ls -l
+  102  chmod +rw bunch_of_things.txt
+  103  ls -l
+  104  chmod a +rw bunch_of_things.txt
+  105  chmod a+rw bunch_of_things.txt
+  106  ls -l
+  107  chmod a-w bunch_of_things.txt
+  108  ls -l | head -1
+  109  ls -l | head -2
+  110  chmod 644 bunch_of_things.txt
+  111  ls -l | head -2
+  112  ps
+  113  sleep 30 &
+  114  ps
+  115  kill 31986
+  116  sleep 300 &
+  117  jbos
+  118  jobs
+  119  sleep 200
+  120  sleep 100
+  121  jobs
+  122  fg %1
+  123  jobs
+  124  bg %3
+  125  jobs
+  126  kill %*
+  127  kill %1
+  128  kill %2
+  129  kill %3
+  130  jobs
+  131  ps
+  132  bew
+  133  brew
+  134  apt install cmatrix
+  135  cmatrix
+  136  sl > tst.txt
+  137  cat tst.txt
+  138  op tst.txt
+  139  telnet
+  140  telnet towel.blinkenlights.nl
+  141  factor
+  142  node
+  143  cat mostrar texto
+  144  cat 'mostrar texto'
+  145  chmod -h
+  146  chmod
+  147  chmod --help
+  148  sort --help | grep o
+  149  sort -o
+  150  cd code
+  151  ls
+  152  cd trybe-exercicios
+  153  cd m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  154  ls
+  155  sort -o countries.txt > countries_ordenados.txt
+  156  sort -o countries.txt countries_ordenados.txt
+  157  cat countries_ordenados.txt
+  158  sort -o
+  159  sort countries.txt
+  160  cat countries.txt
+  161  cat phrases2.txt
+  162  grep --help | grep 'v'
+  163  cd code
+  164  cd trybe-exercicios/m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  165  ls -l
+  166  chmod a+rw bunch_of_things.txt
+  167  ls -l
+  168  chmod g-rw bunch_of_things.txt
+  169  ls -k
+  170  ls -l
+  171  chmod g+rw bunch_of_things.txt
+  172  ls -l
+  173  sl
+  174  ls -l
+  175  chmod g-w bunch_of_things.txt
+  176  ls -l
+  177  chmod g+rw bunch_of_things.txt
+  178  ls -l
+  179  ls
+  180  cd code/trybe-exercicios
+  181  cd m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  182  ls
+  183  cat phrases.txt
+  184  grep 'br' phrases.txt
+  185  apt search curl
+  186  tee --help
+  187  yum
+  188  fdisk
+  189  fidk --help
+  190  du
+  191  df
+  192  cd code
+  193  ls
+  194  cd trybe-exercicios
+  195  cd m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  196  ls
+  197  cat countries_ordenados.txt phrases2.txt skills2.txt
+  198  cd code/trybe-exercicios/m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  199  grep
+  200  grep *br* phrases2.txt
+  201  grep -iv *br* phrases2.txt
+  202  grep br phrases2.txt
+  203  grep -iv *b*` phrases2.txt\n\n\n\n
+  204  cd code
+  205  cd trybe-exercicios/m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  206  grep -iv `*br*` phrases2.txt
+  207  grep -iv '*br*' phrases2.txt
+  208  grep -iv br phrases2.txt
+  209  grep -i br phrases2.txt
+  210  lua
+  211  nvm -v
+  212  nvm install lts
+  213  nvm list
+  214  nvm install lts/gallium
+  215  node -v
+  216  nvm use 14
+  217  node -v
+  218  nvm use 16
+  219  lua
+  220  exit
+  221  tail .zshrc
+  222  cat >> .zshrc
+  223  exit
+  224  cp .zshrc .zshrc_backup
+  225  tail .zshrc_backup
+  226  chsh
+  227  man chsh
+  228  sudo chsh -s /usr/bin/zsh
+  229  ls
+  230  cat tst.txt
+  231  ls
+  232  rm tst.txt
+  233  ls
+  234  cd .config
+  235  cd neofetch
+  236  ls
+  237  subl config.conf
+  238  neofetch
+  239  subl .zshrc
+  240  zsh
+  241  cd ..
+  242  cd ~
+  243  cd code/trybe-exercicios/m1-fundamentos/b1d3-4_unix_e_bash
+  244  ls
+  245  zsh
+  246  cd ~
+  247  =====-+++==+++bash+====
+  248  bash
+  249  tail .bashrc
+  250  vim .bashrc
+  251  bash
+  252  htop
+  253  ls
+  254  apt search termite
+  255  apt search
+  256  apt search termite
+  257  curl https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/git/problema_git-abd3f8bdb2160b6f14b5cb143c379e6e.txt
+  258  curl https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/git/problema_git-abd3f8bdb2160b6f14b5cb143c379e6e.txt > motivos.txt
+  259  wget https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/git/problema_git-abd3f8bdb2160b6f14b5cb143c379e6e.txt
+  260  ls
+  261  rm problema_git-abd3f8bdb2160b6f14b5cb143c379e6e.txt
+  262  ls
+  263  curl https://textuploader.com/tdwjc
+  264  tail motivos.txt
+  265  cat >> motivos.txt
+  266  tail motivos.txt
+  267  mv motivos.txt pessoa3.txt
+  268  ls
+  269  cat pessoa3.txt
+  270  curl https://trybecourse.slack.com/files/U032QET3YKU/F034GBGJM88/pessoa3.txt
+  271  ls
+  272  curl https://trybecourse.slack.com/files/U032MHR89DK/F033SK1TBS7/pessoa5.txt
+  273  wget https://trybecourse.slack.com/files/U032MHR89DK/F033SK1TBS7/pessoa5.txt
+  274  cat pessoa5.txt
+  275  subl pessoa5.txt
+  276  ls
+  277  cd Downloads
+  278  ls
+  279  ls *.txt
+  280  cat Etapa\ 1\ feita.txt
+  281  cat >> 'Etapa 1 feita.txt'
+  282  tail 'Etapa 1 feita.txt'
+  283  ls
+  284  cd code
+  285  cd trybe-exercicios/m1-fundamentos/b1d3-4_unix_e_bash/unix_tests
+  286  ls
+  287  history

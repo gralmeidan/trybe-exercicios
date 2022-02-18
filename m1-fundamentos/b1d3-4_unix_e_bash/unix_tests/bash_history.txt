@@ -1,0 +1,400 @@
+ 1092  op --help
+ 1093  krita --help
+ 1094  man krita
+ 1095  man op
+ 1096  man xdg-open
+ 1097  whatis cp
+ 1098  whatis krita
+ 1099  whatis xdg-open 
+ 1100  whatis grep
+ 1101  whatis curl
+ 1102  whatis wget
+ 1103  whatis apropos
+ 1104  apropos copy
+ 1105  apropos network
+ 1106  apropos clear
+ 1107  clear
+ 1108  history
+ 1109  ls
+ 1110  cd code/
+ 1111  ls
+ 1112  mkdir trybe
+ 1113  ls
+ 1114  cd trybe/
+ 1115  ls
+ 1116  cd ..
+ 1117  cd .config/
+ 1118  cd ../code/
+ 1119  ls -a
+ 1120  cd .code/
+ 1121  ls
+ 1122  cd ..
+ 1123  ls
+ 1124  cd trybe/
+ 1125  ls
+ 1126  zsh
+ 1127  ls
+ 1128  ls usr/
+ 1129  nemo .
+ 1130  cd code/
+ 1131  ls
+ 1132  cd trybe/
+ 1133  ls
+ 1134  mkdir exercicios
+ 1135  cd exercicios/
+ 1136  ls
+ 1137  mkdir 1_3
+ 1138  ls
+ 1139  cd 1_3/
+ 1140  cd code/
+ 1141  cd trybe/
+ 1142  cd ..
+ 1143  rmdir trybe/
+ 1144  rmdir -rf trybe/
+ 1145  rm -rf trybe/
+ 1146  ls
+ 1147  mkdir trybe-exercicios/modulo1/bloco_01_dia_03
+ 1148  mkdir trybe-exercicios
+ 1149  cd trybe-exercicios/
+ 1150  mkdir modulo1
+ 1151  cd modulo1/
+ 1152  mkdir bloco_01_dia_03
+ 1153  cd bloco_01_dia_03/
+ 1154  ls
+ 1155  ls ..
+ 1156  cd ..
+ 1157  mkdir bloco_01_dia_04
+ 1158  ls
+ 1159  cd bloco_01_dia_03
+ 1160  cd ..
+ 1161  rm -rf *
+ 1162  ls
+ 1163  mkdir m1-fundamentos
+ 1164  ls
+ 1165  cd m1-fundamentos/
+ 1166  mkdir b1d3_unix-e-shell
+ 1167  ls
+ 1168  cd b1d3_unix-e-shell/
+ 1169  ls
+ 1170  mkdir unix_tests
+ 1171  cd unix_tests/
+ 1172  touch trybe.txt
+ 1173  cp trybe.txt trybe_backup.txt
+ 1174  ls
+ 1175  mv trybe.txt opa.txt
+ 1176  mkdir backup
+ 1177  mkdir trybe_backup.txt backup/
+ 1178  mv trybe_backup.txt backup/
+ 1179  ls
+ 1180  mkdir backup2
+ 1181  mv backup/trybe_backup.txt backup2/
+ 1182  ls backup2
+ 1183  rm backup
+ 1184  rm backup/
+ 1185  rm -r backup
+ 1186  ls
+ 1187  mv backup2/ backup/
+ 1188  ls
+ 1189  pwd
+ 1190  ls -a
+ 1191  rm -r backup/
+ 1192  clear
+ 1193  neofetch
+ 1194  pwd
+ 1195  cat > skills.txt
+ 1196  cat skills.txt 
+ 1197  xdg-terminal
+ 1198  terminal
+ 1199  sudo gnome-terminal
+ 1200  ls
+ 1201  head -5 skills.txt 
+ 1202  tail -5 skills.txt 
+ 1203  ls
+ 1204  rm *.txt
+ 1205  ls
+ 1206  ls -a
+ 1207  cd ..
+ 1208  ls
+ 1209  cd unix_tests/
+ 1210  curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+ 1211  ls
+ 1212  cat countries.txt 
+ 1213  ls
+ 1214  clear
+ 1215  less countries.txt 
+ 1216  grep -i bra?il countries.txt 
+ 1217  grep
+ 1218  grep Brazil countries.txt 
+ 1219  grep Bra?il countries.txt 
+ 1220  grep Bra*il countries.txt 
+ 1221  cat > frases.txt
+ 1222  tail frases.txt 
+ 1223  grep -in fox frases.txt 
+ 1224  mv frases.txt phrases.txt
+ 1225  tail phrases.txt 
+ 1226  cw -l phrases.txt 
+ 1227  wc -l phrases.txt 
+ 1228  cat -n phrases.txt 
+ 1229  wc -l phrases.txt 
+ 1230  wc -w phrases.txt 
+ 1231  touch empty.tbt
+ 1232  touch empty.pdf
+ 1233  ls
+ 1234  ls *.txt
+ 1235  ls *.tbt
+ 1236  man ls
+ 1237  man
+ 1238  ls --help
+ 1239  man ls
+ 1240  grep --help
+ 1241  ls
+ 1242  mkdir 1
+ 1243  mkdir 2
+ 1244  cd 1
+ 1245  touch tst.txt
+ 1246  mv tst.txt ../2/
+ 1247  ls
+ 1248  cd ..
+ 1249  rmdir 1/
+ 1250  ls
+ 1251  rm -rf 2/tst.txt 
+ 1252  ls
+ 1253  rmdir 2/
+ 1254  ls
+ 1255  grep -c
+ 1256  grep help
+ 1257  grep --help
+ 1258  cd /
+ 1259  cd Documentos
+ 1260  ls
+ 1261  cd Downloads
+ 1262  cd Documents
+ 1263  cd Music
+ 1264  cd ..
+ 1265  cd Downloads
+ 1266  ls
+ 1267  cd ..
+ 1268  htop
+ 1269  cd Downloads/
+ 1270  ls
+ 1271  ls /
+ 1272  ls /usr
+ 1273  cd usr/
+ 1274  ls
+ 1275  ls /usr
+ 1276  cp * /usr/
+ 1277  sudo cp -r * /usr/
+ 1278  cd ..
+ 1279  ls
+ 1280  cd etc
+ 1281  ls
+ 1282  ls /etc/
+ 1283  ls
+ 1284  sudo cp -r * /etc/
+ 1285  cat > tst.txt
+ 1286  cat tst.txt 
+ 1287  rm tst.txt 
+ 1288  ls
+ 1289  cat > tst.txt
+ 1290  ls tst.txt 
+ 1291  cat tst.txt 
+ 1292  cat > tst.txt 
+ 1293  cat tst.txt 
+ 1294  rm tst.txt 
+ 1295  ls
+ 1296  cat sei
+ 1297  cat sei n sei
+ 1298  echo sei
+ 1299  echo sei n sei
+ 1300  cat -h
+ 1301  cat --help
+ 1302  cat -
+ 1303  sort < .bashrc 
+ 1304  who .bashrc 
+ 1305  who
+ 1306  who > user.txt
+ 1307  ls
+ 1308  cat user.txt 
+ 1309  ls
+ 1310  who
+ 1311  cd /
+ 1312  who
+ 1313  sudo who
+ 1314  cd ~
+ 1315  |
+ 1316  pipe | tf
+ 1317  rm user.txt 
+ 1318  cat > tst.txt
+ 1319  cat tst.txt 
+ 1320  cat tst.txt | sort
+ 1321  ls
+ 1322  who | wc -l
+ 1323  ls
+ 1324  rm tst.txt 
+ 1325  cat neofetch >> .bashrc
+ 1326  echo neofetch >> .bashrc
+ 1327  tail .bashrc 
+ 1328  vim .bashrc 
+ 1329  tail .bashrc 
+ 1330  cd Downloads/
+ 1331  ls -l
+ 1332  ls -l -h
+ 1333  ls -l
+ 1334  cd ..
+ 1335  echo opa > opa.txt
+ 1336  ls
+ 1337  cd gralmeidan/
+ 1338  ls
+ 1339  echo opa > opa.txt
+ 1340  ls
+ 1341  ls -l
+ 1342  ls -l | tail -6 | head - 1
+ 1343  ls -l | tail -6 | head -1
+ 1344  chmod +x opa.txt
+ 1345  ls -l | tail -6 | head -1
+ 1346  ls
+ 1347  ./opa.txt 
+ 1348  opa.txt
+ 1349  ls
+ 1350  ./Games/
+ 1351  ./Games
+ 1352  ./opa.txt 
+ 1353  cat > opa.txt 
+ 1354  ./opa.txt 
+ 1355  ll
+ 1356  ls -l
+ 1357  cd /
+ 1358  ls -l
+ 1359  ll
+ 1360  xkill
+ 1361  ps
+ 1362  htop
+ 1363  sleep 5
+ 1364  jobs
+ 1365  ps
+ 1366  jobs
+ 1367  sleep 100
+ 1368  nemo && .
+ 1369  nemo &
+ 1370  jobs
+ 1371  ps
+ 1372  sleep 100
+ 1373  jobs
+ 1374  sleep 100
+ 1375  jobs
+ 1376  fg sleep 100
+ 1377  fg %1
+ 1378  fg %2
+ 1379  jobs
+ 1380  kill 2
+ 1381  fg nemo
+ 1382  jobs
+ 1383  ps
+ 1384  kill %2
+ 1385  jobs
+ 1386  ps
+ 1387  kill 17013
+ 1388  kill 16960
+ 1389  ls
+ 1390  xkill
+ 1391  sort -g
+ 1392  sort --help
+ 1393  history | tail -5
+ 1394  sort --help | grep -i 'g'
+ 1395  sort --help | grep -i '-g'
+ 1396  sort --help | grep -i "-g"
+ 1397  sort --help | grep -i "g"
+ 1398  ls -lag
+ 1399  ls -g
+ 1400  ls -l
+ 1401  who
+ 1402  cat > dataOne.txt
+ 1403  cat dataOne.txt 
+ 1404  touch dataTwo.txt
+ 1405  sort dataOne.txt 
+ 1406  cat dataOne.txt 
+ 1407  cat dataOne.txt > dataOne.txt 
+ 1408  cat dataOne.txt 
+ 1409  sort dataTwo.txt > dataTwo.txt 
+ 1410  cat dataTwo.txt 
+ 1411  ls
+ 1412  cat top_skills 
+ 1413  rm top_skills 
+ 1414  head -3 skills2.txt | sort > top_skills
+ 1415  cat top_skills 
+ 1416  rm top_skills 
+ 1417  cat | sort | head -3 skills2.txt > top_skills.txt
+ 1418  cat top_skills.txt 
+ 1419  rm top_skills.txt 
+ 1420  ls
+ 1421  cat skills2.txt 
+ 1422  sort < skills2.txt 
+ 1423  sort skills2.txt 
+ 1424  sort skills2.txt | head -3 > top_skills.txt
+ 1425  cat top_skills.txt 
+ 1426  cat > skills2.txt
+ 1427  cat skiils2
+ 1428  cat skills2.txt 
+ 1429  head - 3 skills2.txt | sort | cat
+ 1430  head -3 skills2.txt | sort | echo
+ 1431  head -3 skills2.txt
+ 1432  head -3 skills2.txt | sort > top_skills
+ 1433  cat top_skills 
+ 1434  ls
+ 1435  rm *.txt
+ 1436  ls
+ 1437  mkdir tst
+ 1438  cd tst/
+ 1439  touch texto
+ 1440  touch teste-texto
+ 1441  touch texto-teste
+ 1442  touch texto.txt
+ 1443  ls
+ 1444  find . -name "texto"
+ 1445  find . -name "teste-texto"
+ 1446  find . -name "texto*
+ 1447  "
+ 1448  find . -name "texto*"
+ 1449  find . -name "*texto"
+ 1450  ls
+ 1451  cd ..
+ 1452  ls
+ 1453  rm -rf tst/
+ 1454  ls
+ 1455  cd code/
+ 1456  ls
+ 1457  cd trybe-exercicios/
+ 1458  cd m1-fundamentos/b1d3_unix-e-shell/unix_tests/
+ 1459  cd ..
+ 1460  ls
+ 1461  mv b1d3_unix-e-shell/ b1d3-4_unix_e_bash/
+ 1462  ls
+ 1463  cd b1d3-4_unix_e_bash/
+ 1464  ls
+ 1465  cd unix_tests/
+ 1466  cat > skills2.txt
+ 1467  ls skills2.txt 
+ 1468  cat .zshrc
+ 1469  zsh --version
+ 1470  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ 1471  zsh
+ 1472  source .zshrc
+ 1473  tail .bashrc 
+ 1474  tail -20 .bashrc 
+ 1475  tail -8 .bashrc 
+ 1476  tail -13 .bashrc
+ 1477  tail -14 .bashrc
+ 1478  tail -14 .bashrc >> .zshrc 
+ 1479  tail -14 .zshrc
+ 1480  cat >> .bashrc 
+ 1481  tail .bashrc 
+ 1482  tail .zshrc 
+ 1483  source
+ 1484  source ./zshrc
+ 1485  tail .zshrc
+ 1486  source zshrc
+ 1487  source .zshrc
+ 1488  zsh
+ 1489  history
+ 1490  history tail -400 >bash_history.txt
+ 1491  history | tail -400 > history.txt
