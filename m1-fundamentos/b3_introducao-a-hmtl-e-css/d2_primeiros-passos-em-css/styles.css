@@ -1,0 +1,28 @@
+        
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 65px;
+    color: orange;
+    }
+
+ul {
+    background-color: purple;
+    line-height: 5em;
+    font-style: oblique;
+    text-align: right;
+    text-decoration: underline;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.p_ul {
+    background-color: rgb(15, 7, 90);
+}
+
