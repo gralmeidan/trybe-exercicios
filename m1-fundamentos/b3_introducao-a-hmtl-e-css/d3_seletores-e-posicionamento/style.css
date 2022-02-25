@@ -1,47 +1,58 @@
-div:hover {
-	border-style: solid;
+ol {
+  background-color: yellow;
+}
+ol li:nth-child(even) {
+  color: green;
+}
+ol li:nth-child(odd) {
+  text-transform: uppercase;
+}
+ol li {
+  font-weight: bold;
 }
 
-div:first-of-type {
-	color: red;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red;
 }
 
-div:nth-of-type(2) {
-	color: orange;
+h1 {
+  font-size: 40px;
+  border: 1px solid black;
 }
 
-div:nth-of-type(3) {
-	color: purple;
-	transform: scale(1.2,1.2);
+li {
+  font-size: 20px;
 }
 
-div:nth-of-type(4) {
-	color:darkblue;
+ul:first-of-type li:nth-child(-n + 3) {
+  color: blue;
+}
+ul:first-of-type li:nth-child(2) {
+  background-color: pink;
 }
 
-div:nth-of-type(5) {
-	color: aquamarine;
+ul:last-of-type li:hover {
+  font-weight: bold;
+}
+ul:last-of-type li:nth-of-type(1):hover * {
+  color: orange;
+}
+ul:last-of-type li:nth-of-type(2):hover * {
+  color: green;
+}
+ul:last-of-type li:nth-of-type(3):hover * {
+  color: black;
+}
+ul:last-of-type li:nth-of-type(4):hover * {
+  color: yellow;
+}
+ul:last-of-type li:nth-of-type(5):hover * {
+  color: lightgreen;
 }
 
-div:first-of-type h3 {
-	background-color: aqua;
-	font-style: italic;
-}
-
-div:nth-of-type(2) h3 {
-	background-color: rgb(82, 7, 59);
-}
-
-div:nth-of-type(3) h3 {
-	background-color: rgb(50, 141, 22);
-	font-style: italic;
-}
-
-div:nth-of-type(4) h3 {
-	background-color: rgb(171, 173, 32);
-}
-
-div:nth-of-type(5) h3 {
-	background-color: rgb(116, 89, 54);
-	font-style: italic;
-}
+/*# sourceMappingURL=style.css.map */
