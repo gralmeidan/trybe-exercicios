@@ -1,15 +1,47 @@
-h1, p {
-	text-align: center;
+div:hover {
+	border-style: solid;
 }
 
-li:hover {
-	background-color: aquamarine;
+div:first-of-type {
+	color: red;
 }
 
-li:active {
-	font-family: monospace;
+div:nth-of-type(2) {
+	color: orange;
 }
 
-ol, ul {
-	list-style: none
+div:nth-of-type(3) {
+	color: purple;
+	transform: scale(1.2,1.2);
+}
+
+div:nth-of-type(4) {
+	color:darkblue;
+}
+
+div:nth-of-type(5) {
+	color: aquamarine;
+}
+
+div:first-of-type h3 {
+	background-color: aqua;
+	font-style: italic;
+}
+
+div:nth-of-type(2) h3 {
+	background-color: rgb(82, 7, 59);
+}
+
+div:nth-of-type(3) h3 {
+	background-color: rgb(50, 141, 22);
+	font-style: italic;
+}
+
+div:nth-of-type(4) h3 {
+	background-color: rgb(171, 173, 32);
+}
+
+div:nth-of-type(5) h3 {
+	background-color: rgb(116, 89, 54);
+	font-style: italic;
 }
