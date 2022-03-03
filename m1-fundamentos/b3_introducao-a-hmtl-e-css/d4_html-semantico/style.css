@@ -1,0 +1,49 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #272635;
+  line-height: 50px;
+  padding-left: 10px;
+}
+header h1 {
+  color: #a9d3ff;
+  margin-top: 0;
+  font-family: sans-serif;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+header + nav ul li a {
+  text-decoration: none;
+  color: #6c756b;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+header + nav ul li ::before {
+  margin: 10px;
+  content: "•";
+  color: #272635;
+}
+
+main {
+  width: 60%;
+  transform: translate(40%);
+}
+
+img {
+  width: 200px;
+}
+
+aside {
+  position: absolute;
+  width: 20%;
+  top: 0px;
+  right: -25%;
+}
+
+/*# sourceMappingURL=style.css.map */
