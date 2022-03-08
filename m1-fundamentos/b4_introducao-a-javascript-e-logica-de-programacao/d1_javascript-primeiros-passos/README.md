@@ -4,8 +4,6 @@ Hoje aprendemos o básico de JavaScript, como variáveis, constantes e estrutura
 
 ## Exercícios desenvolvidos
 
-### Fixação 1
-
 1. Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b , definidas no começo com os valores que serão operados. Faça programas para:
     * Adição (a + b)
     * Subtração (a - b)
