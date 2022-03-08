@@ -1,4 +1,4 @@
-# Bloco 4, Dia 1, Módulo 1
+# Bloco 4, Dia 2, Módulo 1
 
 Hoje aprendemos o que são Arrays e como navega-los com for e for/of
 
