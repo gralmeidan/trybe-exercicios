@@ -63,7 +63,15 @@
         }
         exercicio3()
         // 4. Crie uma função que corrija o texto da tag <h1>.
+        let exercicio4 = text => {
+            document.getElementsByTagName('h1')[0].innerText = text
+        }
+        exercicio4('Exercício 5.1 = JavaScript')
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        let exercicio5 = () => {
+            document.getElementsByTagName('p')[0].innerText = document.getElementsByTagName('p')[0].innerText.toUpperCase()
+        }
+        exercicio5()
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
   </body>
