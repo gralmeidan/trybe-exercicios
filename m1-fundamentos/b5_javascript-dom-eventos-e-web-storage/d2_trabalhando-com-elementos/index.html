@@ -72,6 +72,13 @@
         let paragraph1 = document.createElement('p');
         paragraph1.innerText = 'Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;';
         centerContent.appendChild(paragraph1);
+
+        let leftContent = document.createElement('section');
+        leftContent.className = 'left-content';
+        centerContent.appendChild(leftContent);
+        let rightContent = document.createElement('section');
+        rightContent.className = 'right-content';
+        centerContent.appendChild(rightContent);
     </script>
   </body>
 </html>
