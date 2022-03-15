@@ -79,10 +79,20 @@
         let rightContent = document.createElement('section');
         rightContent.className = 'right-content';
         centerContent.appendChild(rightContent);
-        
+
         let smallImage = document.createElement('img');
-        smallImage.src = 'https://picsum.photos/200'
-        leftContent.appendChild(smallImage)
+        smallImage.src = 'https://picsum.photos/200';
+        leftContent.appendChild(smallImage);
+
+        let unorderedList = document.createElement('ul');
+        let texts = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez'];
+        for(let i = 0; i < 10; i += 1){
+            unorderedList.appendChild(document.createElement('li'));
+            unorderedList.children[i].innerText = texts[i];
+        }
+        rightContent.appendChild(unorderedList);
+
+
     </script>
   </body>
 </html>
