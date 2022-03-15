@@ -105,9 +105,15 @@
 
         centerContent.removeChild(leftContent);
 
-        rightContent.style.marginRight = 'auto'
+        rightContent.style.marginRight = 'auto';
 
-        centerContent.style.backgroundColor = 'green'
+        centerContent.style.backgroundColor = 'green';
+
+        let ulChildren = unorderedList.children;
+        for(let i = 9; i >= 8; i -= 1){
+            unorderedList.removeChild(ulChildren[i]);
+            console.log(i);
+        }
     </script>
   </body>
 </html>
