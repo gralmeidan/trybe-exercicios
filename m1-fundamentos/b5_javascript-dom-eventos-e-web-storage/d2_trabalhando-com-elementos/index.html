@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        let title = document.createElement('h1');
+        title.innerText = 'Exercício 5.2 = JavaScript DOM';
+        document.getElementsByTagName('body')[0].appendChild(title);
+
+        let mainContent = document.createElement('main');
+        mainContent.className = 'main-content';
+        document.getElementsByTagName('body')[0].appendChild(mainContent);
+
+        let centerContent = document.createElement('section');
+        centerContent.className = 'center-content';
+        mainContent.appendChild(centerContent);
+
+        let paragraph1 = document.createElement('p');
+        paragraph1.innerText = 'Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;';
+        centerContent.appendChild(paragraph1);
+
+        let leftContent = document.createElement('section');
+        leftContent.className = 'left-content';
+        centerContent.appendChild(leftContent);
+        let rightContent = document.createElement('section');
+        rightContent.className = 'right-content';
+        centerContent.appendChild(rightContent);
+
+        let smallImage = document.createElement('img');
+        smallImage.src = 'https://picsum.photos/200';
+        leftContent.appendChild(smallImage);
+
+        let unorderedList = document.createElement('ul');
+        let texts = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez'];
+        for(let i = 0; i < 10; i += 1){
+            unorderedList.appendChild(document.createElement('li'));
+            unorderedList.children[i].innerText = texts[i];
+        }
+        rightContent.appendChild(unorderedList);
+
+        for(let i = 0; i < 3; i += 1){
+            mainContent.appendChild(document.createElement('h3'));
+        }
+
+        title.className = 'title';
+
+        let h3s = document.getElementsByTagName('h3');
+        for(let i = 0; i < h3s.length; i += 1){
+            h3s[i].className = 'description';
+        }
+
+        centerContent.removeChild(leftContent);
+
+        rightContent.style.marginRight = 'auto';
+
+        centerContent.style.backgroundColor = 'green';
+
+        let ulChildren = unorderedList.children;
+        for(let i = 9; i >= 8; i -= 1){
+            unorderedList.removeChild(ulChildren[i]);
+            console.log(i);
+        }
+    </script>
+  </body>
+</html>
