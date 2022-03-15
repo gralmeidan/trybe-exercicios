@@ -96,8 +96,12 @@
             mainContent.appendChild(document.createElement('h3'));
         }
 
-        //Adicione a classe title na tag h1 criada;
         title.className = 'title';
+
+        let h3s = document.getElementsByTagName('h3');
+        for(let i = 0; i < h3s.length; i += 1){
+            h3s[i].className = 'description';
+        }
     </script>
   </body>
 </html>
