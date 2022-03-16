@@ -74,3 +74,15 @@ function handleHolidayButton() {
 }
 
 handleHolidayButton()
+
+// Exercício 4
+
+function createFridayButton(str) {
+    let button = document.createElement('button')
+    button.id = 'btn-friday'
+    button.innerText = str
+    document.querySelector('.buttons-container').appendChild(button)
+}
+
+createFridayButton('Sexta-feira')
+
