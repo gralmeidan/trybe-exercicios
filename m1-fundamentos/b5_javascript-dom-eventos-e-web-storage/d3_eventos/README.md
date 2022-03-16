@@ -6,6 +6,8 @@ Módulo 1, Bloco 5, Dia 3
 
 ### Calendário Tryber
 
+<img src = 'https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/javascript/dom-manipulation/gif/calendario-0a0d72ae91dc4119dd55d8cd379c9b29.gif'/>
+
 Antes de fazer os exercícios, crie um arquivo HTML na pasta exercises/5_3 e copie o código abaixo:
 
 ```HTML
