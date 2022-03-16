@@ -86,3 +86,22 @@ function createFridayButton(str) {
 
 createFridayButton('Sexta-feira')
 
+// Exercício 5
+
+function handleFridayButton() {
+    let button = document.getElementById('btn-friday')
+    button.addEventListener('click',onClick)
+    let fridays = [4,11,18,25]
+    function onClick() {
+        let arr = document.getElementsByClassName('friday')
+        for(let i = 0; i < arr.length; i += 1){
+            if(arr[i].innerText == fridays[i]){
+                arr[i].innerText = '🥳'
+            } else {
+                arr[i].innerText = fridays[i]
+            }
+        }
+    }
+}
+
+handleFridayButton()
