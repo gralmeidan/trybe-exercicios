@@ -105,3 +105,21 @@ function handleFridayButton() {
 }
 
 handleFridayButton()
+
+// Exercício 6
+
+function zoomEffect() {
+    function zoomIn(e) {
+        e.target.style.fontSize = '40px'
+    }
+    function zoomOut(e) {
+        e.target.style.fontSize = '20px'
+    }
+    let days = document.getElementsByClassName('day')
+    for(let i = 0; i < days.length; i += 1){
+        days[i].addEventListener('mouseenter',zoomIn)
+        days[i].addEventListener('mouseleave',zoomOut)
+    }
+}
+
+zoomEffect()
