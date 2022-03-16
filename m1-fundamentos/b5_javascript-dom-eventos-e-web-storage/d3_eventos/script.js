@@ -183,3 +183,29 @@ function handleDayColoring() {
 }
 
 handleDayColoring()
+
+// Bonus
+
+function handleNewTaskBox() {
+    let inputText = document.getElementById('task-input')
+    let button = document.getElementById('btn-add')
+    
+    function addTask(e) {
+        if(e.type == 'keyup' && e.key != 'Enter'){
+            return
+        }
+        if(inputText.value == ''){
+            alert('Caixa de texto vazia')
+            return;
+        } 
+        createTask(inputText.value)
+        addTaskColor('green')
+        handleTaskSelection()
+    }
+
+    button.addEventListener('click',addTask)
+    inputText.addEventListener('keyup',addTask)
+
+}
+
+handleNewTaskBox()
