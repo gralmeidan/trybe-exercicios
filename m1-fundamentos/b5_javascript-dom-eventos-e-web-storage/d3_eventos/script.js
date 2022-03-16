@@ -134,3 +134,15 @@ function createTask(str) {
 }
 
 createTask('Lorem Ipsum')
+
+// Exercício 8
+
+function addTaskColor(color) {
+    taskList = document.getElementsByClassName('my-tasks')[0]
+    newTask = document.createElement('div')
+    newTask.className = 'task'
+    newTask.style.backgroundColor = color
+    taskList.appendChild(newTask)
+}
+
+addTaskColor('blue')
