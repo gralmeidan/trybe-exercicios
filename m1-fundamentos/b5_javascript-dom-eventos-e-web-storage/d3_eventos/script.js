@@ -123,3 +123,14 @@ function zoomEffect() {
 }
 
 zoomEffect()
+
+// Exercício 7
+
+function createTask(str) {
+    taskList = document.getElementsByClassName('my-tasks')[0]
+    newTask = document.createElement('span')
+    newTask.innerText = str
+    taskList.appendChild(newTask)
+}
+
+createTask('Lorem Ipsum')
