@@ -146,3 +146,22 @@ function addTaskColor(color) {
 }
 
 addTaskColor('blue')
+
+// Exercício 9
+
+function handleTaskSelection() {
+    function select(e) {
+        if(e.target.className == 'task'){
+            e.target.className += ' selected'
+        } else {
+            e.target.className = 'task'
+        }
+        console.log(e.target.className)
+    } 
+    let arr = document.getElementsByClassName('task')
+    for(let i = 0; i < arr.length; i += 1){
+        arr[i].addEventListener('click', select)
+    }
+}
+
+handleTaskSelection()
