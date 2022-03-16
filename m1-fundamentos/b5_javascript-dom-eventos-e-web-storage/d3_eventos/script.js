@@ -156,7 +156,6 @@ function handleTaskSelection() {
         } else {
             e.target.className = 'task'
         }
-        console.log(e.target.className)
     } 
     let arr = document.getElementsByClassName('task')
     for(let i = 0; i < arr.length; i += 1){
@@ -165,3 +164,22 @@ function handleTaskSelection() {
 }
 
 handleTaskSelection()
+
+// Exercício 10
+
+function handleDayColoring() {
+    function color(e) {
+        let newColor = document.getElementsByClassName('task selected')[0].style.backgroundColor
+        if(e.target.style.color != newColor){
+            e.target.style.color = newColor
+        } else {
+            e.target.style.color = 'rgb(119, 119, 119)'
+        }
+    }
+    let arr = document.getElementsByClassName('day')
+    for(let i = 0; i < arr.length; i += 1){
+        arr[i].addEventListener('click', color)
+    }
+}
+
+handleDayColoring()
