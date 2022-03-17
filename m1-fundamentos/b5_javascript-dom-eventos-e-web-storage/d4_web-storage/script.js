@@ -13,6 +13,7 @@ window.onload = () => {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
 
+  // Pegando os valores padrão e colocando nos inputs
   let input_bg_color = document.getElementById("bg_color");
   let default_bg_color =
     document.defaultView.getComputedStyle(body).backgroundColor;
@@ -41,4 +42,17 @@ window.onload = () => {
     document.defaultView.getComputedStyle(p).fontFamily;
   input_font_family.value = default_font_family
 
+  // Definindo event listeners
+  let handleBgColorChange = e => {
+    body.style.backgroundColor = e.target.value
+  }
+  input_bg_color.addEventListener('change',handleBgColorChange)
+
+  let handleFontColorChange = e => {
+    let text = document.querySelectorAll('p, h1, h2, h3, hr')
+    for(let i = 0; i < text.length; i += 1){
+      text[i].style.color = e.target.value
+    }
+  }
+  input_font_color.addEventListener('change',handleFontColorChange)
 };
