@@ -49,10 +49,34 @@ window.onload = () => {
   input_bg_color.addEventListener('change',handleBgColorChange)
 
   let handleFontColorChange = e => {
-    let text = document.querySelectorAll('p, h1, h2, h3, hr')
+    let text = document.querySelectorAll('p, h1, h2, h3, input')
     for(let i = 0; i < text.length; i += 1){
       text[i].style.color = e.target.value
     }
   }
   input_font_color.addEventListener('change',handleFontColorChange)
+
+  let handleFontSizeChange = e => {
+    let text = document.querySelectorAll('p, input')
+    for(let i = 0; i < text.length; i += 1){
+      text[i].style.fontSize = e.target.value.toString() + 'px'
+    }
+  }
+  input_font_size.addEventListener('change',handleFontSizeChange)
+
+  let handleLineHeightChange = e => {
+    let text = document.querySelectorAll('p')
+    for(let i = 0; i < text.length; i += 1){
+      text[i].style.lineHeight = e.target.value.toString() + 'px'
+    }
+  }
+  input_line_height.addEventListener('change',handleLineHeightChange)
+
+  let handleFontFamilyChange = e => {
+    let text = document.querySelectorAll('p')
+    for(let i = 0; i < text.length; i += 1){
+      text[i].style.fontFamily = e.target.value
+    }
+  }
+  input_font_family.addEventListener('keyup',handleFontFamilyChange)
 };
