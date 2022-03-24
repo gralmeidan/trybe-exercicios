@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Concurso TrybeTrip</h1>
+			</header>
+			<form action="" method="get">
+				<fieldset id="dados-pessoais">
+					<label
+						>Nome:
+						<input
+							type="text"
+							name="name"
+							id="input-name"
+							minlength="10"
+							maxlength="40"
+							required
+						/>
+					</label>
+					<br />
+					<label
+						>E-mail:
+						<input
+							type="email"
+							name="email"
+							id="input-email"
+							minlength="10"
+							maxlength="50"
+							required
+						/>
+					</label>
+				</fieldset>
+				<fieldset>
+					<label class="radio_label">
+						<input
+							type="radio"
+							name="option"
+							id="input-option1"
+							required
+						/>
+						Cidade
+					</label class="radio_label">
+					<label>
+						<input
+							type="radio"
+							name="option"
+							id="input-option2"
+							required
+						/>
+						Campo
+					</label class="radio_label">
+					<label>
+						<input
+							type="radio"
+							name="option"
+							id="input-option3"
+							required
+						/>
+						Praia
+					</label class="radio_label">
+					<label>
+						<input
+							type="radio"
+							name="option"
+							id="input-option4"
+							required
+						/>
+						Montanhas
+					</label>
+				</fieldset>
+				<p>
+					Por que você deveria ser a pessoa desenvolvedora a ganhar o
+					concurso TrybeTrip?
+				</p>
+				<textarea
+					name="answer"
+					id="input-answer"
+					cols="30"
+					rows="10"
+					maxlength="500"
+					required
+				></textarea>
+				<p>Qual a melhor data pra realizar a viagem?</p>
+				<input type="date" required />
+				<fieldset>
+					<label
+						>Gostaria de receber outras incríveis oportunidades
+						oferecidas pela Trybe?
+						<input
+							type="checkbox"
+							name="spam-agreement"
+							id="input-agreement-spam"
+						/>
+					</label>
+					<label
+						>Concordo que imagens das minhas férias poderão ser
+						usadas na divulgação de concursos futuros.
+						<input
+							type="checkbox"
+							name="agreement"
+							id="input-agreement"
+							required
+						/>
+					</label>
+				</fieldset>
+				<button type="submit" id="submit">Enviar</button>
+				<button id="input-apagar">Apagar</button>
+			</form>
+		</main>
+        <script src="script.js"></script>
+	</body>
+</html>
