@@ -1,0 +1,72 @@
+body {
+    background-color: #282a36;
+}
+
+h1 {
+    color: #ff79c6;
+}
+
+* {
+    font-family: Roboto, sans-serif;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    background-color: #44475a;
+    font-family: serif;
+    font-size: 1em;
+    color: #f8f8f2;
+}
+
+#dados-pessoais label {
+    display: block;
+    color: #8be9fd;
+}
+
+input[type='radio'] {
+    margin-left: 10px;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f8f8f2;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #8be9fd;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+
+fieldset {
+    border: 0px;
+}
+
+.radio_label {
+    content: '';
+}
