@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bulma/css/bulma.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <form action="" method="get" class="container mt-6">
+        <header>
+          <h1 class="title is-2 mb-3">Concurso TrybeTrip</h1>
+        </header>
+        <div id="dados-pessoais" class="field is-loading">
+          <label class="label">Nome:</label>
+          <input
+            type="text"
+            name="name"
+            class="input"
+            id="input-name"
+            minlength="10"
+            maxlength="40"
+            required
+          />
+        </div>
+        <fieldset class="field">
+          <label class="label">E-mail:</label>
+          <input
+            class="input"
+            type="email"
+            name="email"
+            id="input-email"
+            minlength="10"
+            maxlength="50"
+            required
+          />
+        </fieldset>
+        <fieldset class="">
+          <p class="label">Para onde você gostaria de ir?</p>
+          <label class="radio">
+            <input type="radio" name="option" id="input-option1" required />
+            Cidade
+          </label>
+          <label class="radio">
+            <input type="radio" name="option" id="input-option2" required />
+            Campo
+          </label>
+          <label class="radio">
+            <input type="radio" name="option" id="input-option3" required />
+            Praia
+          </label>
+          <label class="radio">
+            <input type="radio" name="option" id="input-option4" required />
+            Montanhas
+          </label>
+        </fieldset>
+        <div class="field mt-3">
+          <p class="label">
+            Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+            TrybeTrip?
+          </p>
+          <textarea
+            name="answer"
+            id="input-answer"
+            cols="30"
+            rows="10"
+            maxlength="500"
+            class="textarea"
+            required
+          ></textarea>
+          <p class="has-text-grey-light">Máximo de 500 caracteres</p>
+        </div>
+        <div class="field">
+          <p class="label">Qual a melhor data pra realizar a viagem?</p>
+          <input type="date" class="input" required />
+        </div>
+        <fieldset>
+          <label class="label checkbox"
+            >Gostaria de receber outras incríveis oportunidades oferecidas pela
+            Trybe?
+            <input
+              type="checkbox"
+              name="spam-agreement"
+              id="input-agreement-spam"
+            />
+          </label>
+          <label class="label checkbox"
+            >Concordo que imagens das minhas férias poderão ser usadas na
+            divulgação de concursos futuros.
+            <input
+              type="checkbox"
+              name="agreement"
+              id="input-agreement"
+              required
+            />
+          </label>
+        </fieldset>
+				<div class="mt-3">
+        	<button type="submit" id="submit" class="button is-success">Enviar</button>
+        	<button id="input-apagar" class="button is-light">Apagar</button>
+				</div>
+			</form>
+    </main>
+  </body>
+</html>
