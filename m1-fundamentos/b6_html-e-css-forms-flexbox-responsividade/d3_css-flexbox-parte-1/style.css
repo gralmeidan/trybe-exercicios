@@ -67,4 +67,10 @@ section + section div h4 {
   color: grey;
 }
 
+hr {
+  width: 40%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
