@@ -2,6 +2,46 @@ html {
   box-sizing: border-box;
 }
 
+article {
+  margin: 5%;
+}
+
+footer {
+  margin: 5%;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+}
+
+header ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: aliceblue;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-color: blanchedalmond;
+  }
 }
