@@ -1,4 +1,4 @@
-# Dia 2: CSS Flexbox - Parte 1
+# Dia 3: CSS Flexbox - Parte 1
 
 Hoje aprendemos como o display flex funciona quando aplicado a contâineres e como modificar seu comportamento e direção através das propriedades `align-items`, `align-content`, `justify-content`, `flex-direction`,`flex-wrap` e `flex-row`  
 
