@@ -35,8 +35,12 @@ header ul li {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background-color: aliceblue;
+  #asides {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  article, footer {
+    margin: 10%;
   }
 }
 
