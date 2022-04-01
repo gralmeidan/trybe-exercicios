@@ -14,4 +14,14 @@ const exercise1 = () => {
   testingScope(true);
 }
 
-exercise1()
+// exercise1()
+
+const exercise2 = () => {
+  const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+  const ordenar = () => oddsAndEvens.sort((a,b) => parseInt(a) - parseInt(b))
+
+  console.log(`Os números ${ordenar()} se encontram ordenados de forma crescente!`)
+}
+
+exercise2()
