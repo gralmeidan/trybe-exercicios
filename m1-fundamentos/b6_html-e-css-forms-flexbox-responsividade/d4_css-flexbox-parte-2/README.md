@@ -1,4 +1,4 @@
-# Dia 2: CSS Flexbox - Parte 1
+# Dia 4: CSS Flexbox - Parte 2
 
 Hoje aprendemos como modificar o comportamento individual de itens dentro de *containers flex* através das propriedades `flex-grow`,`flex-shrink`,`flex-basis`,`align-self` e `order`
 

@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+article {
+  margin: 5%;
+}
+
+footer {
+  margin: 5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+}
+
+header ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  #asides {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  article, footer {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #asides {
+    float: left;
+    flex-flow: column;
+    margin-top: 20%
+  }
+  article, footer {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
