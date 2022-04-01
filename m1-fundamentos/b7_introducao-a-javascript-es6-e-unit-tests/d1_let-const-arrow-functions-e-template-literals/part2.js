@@ -19,4 +19,24 @@ const exercise2 = (frase) => {
   return result
 }
 
-console.log(exercise2("standing here I realize you are just like me trying to make history but who's to judge right from wrong when our guard is down I think we'll both agree that violence breeds violence but in the end it has to be this way")) // standing
+// console.log(exercise2("standing here I realize you are just like me trying to make history but who's to judge right from wrong when our guard is down I think we'll both agree that violence breeds violence but in the end it has to be this way")) // standing
+
+const exercise3 = () => {
+  const skills = ['JavaScript', 'Lógica', 'Tailwind', 'Inglês', 'Ter um gato fofo']
+
+  const replace = (str, char, substr) => str.replace(char, substr)
+
+  const concatenate = (str) => {
+    let newStr = `${str} Minhas cinco principais habilidades são: `;
+    for (const skill of skills) {
+      newStr += `${skill}, `
+    }
+    newStr += '#goTrybe'
+    return newStr
+  }
+
+  let tryberaqui = replace('Tryber x aqui!','x','Geraldo')
+  console.log(concatenate(tryberaqui))
+}
+
+exercise3()
