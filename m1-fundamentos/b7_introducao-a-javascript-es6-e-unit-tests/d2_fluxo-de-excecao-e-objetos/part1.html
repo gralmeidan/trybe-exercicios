@@ -38,6 +38,11 @@
         } catch (error) {
           displayResult(`Erro: ${error.message}`)
         }
+        // Redundante pois a função displayResult() já se encarrega disso.
+        // finally {
+        //   document.getElementById("value1").value = "";
+        //   document.getElementById("value2").value = "";
+        // }
       }
       window.onload = () => {
         const button = document.getElementById("button");
