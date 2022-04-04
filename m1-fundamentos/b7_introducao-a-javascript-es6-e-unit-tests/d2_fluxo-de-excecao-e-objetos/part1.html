@@ -33,6 +33,7 @@
         try {
           checkForEmpty(value1,value2)
           const result = parseInt(value1) + parseInt(value2);
+          if(Number.isNaN(result)) throw new Error('Valor não numérico inserido')
           displayResult(`Resultado: ${result}`)
         } catch (error) {
           displayResult(`Erro: ${error.message}`)
