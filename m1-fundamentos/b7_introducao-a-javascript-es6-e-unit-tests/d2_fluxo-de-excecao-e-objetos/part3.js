@@ -51,3 +51,18 @@ const getStudentsBySubj = (obj, subj) => {
   })
   return count
 } 
+
+const createReport = (obj, teacher) => {
+  let report = {
+    professor: teacher,
+    aulas: [],
+    estudantes: 0,
+  };
+  getKeys(obj).forEach(key => {
+    if (obj[key].professor === teacher) {
+      report.aulas.push(obj[key].materia);
+      report.estudantes += obj[key].numeroEstudantes;
+    }
+  });
+  return report;
+}; 
