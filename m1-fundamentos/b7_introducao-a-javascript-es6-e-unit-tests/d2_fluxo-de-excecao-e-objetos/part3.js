@@ -30,4 +30,15 @@ const getValues = obj => Object.values(obj)
 
 const allLessons = Object.assign({}, {lesson1}, {lesson2}, {lesson3})
 
-console.log(allLessons);
+const getStudentTotal = obj => {
+  const keys = getKeys(obj)
+  let count = 0
+  for(let i = 0; i < keys.length; i += 1){
+    count += allLessons[keys[i]].numeroEstudantes
+  }
+  return count
+}
+
+const getValueByNumber = (obj, index) => obj[Object.keys(obj)[index]]
+
+// console.log(getValueByNumber(lesson1,0));
