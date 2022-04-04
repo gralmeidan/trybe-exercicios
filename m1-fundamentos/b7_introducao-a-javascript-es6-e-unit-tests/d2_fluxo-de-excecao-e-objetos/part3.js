@@ -41,4 +41,5 @@ const getStudentTotal = obj => {
 
 const getValueByNumber = (obj, index) => obj[Object.keys(obj)[index]]
 
-// console.log(getValueByNumber(lesson1,0));
+const verifyPair = (obj, key, value) =>
+  Object.entries(obj).some(arr => arr[0] === key && arr[1] == value);
