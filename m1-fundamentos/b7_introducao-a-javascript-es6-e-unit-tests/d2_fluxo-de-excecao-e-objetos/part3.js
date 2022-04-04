@@ -43,3 +43,11 @@ const getValueByNumber = (obj, index) => obj[Object.keys(obj)[index]]
 
 const verifyPair = (obj, key, value) =>
   Object.entries(obj).some(arr => arr[0] === key && arr[1] == value);
+
+const getStudentsBySubj = (obj, subj) => {
+  let count = 0
+  getKeys(obj).forEach(key => {
+    if(obj[key].materia === subj) count += obj[key].numeroEstudantes
+  })
+  return count
+} 
