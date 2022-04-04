@@ -1,5 +1,5 @@
 const order = {
-  name: 'Rafael Andrade',
+  name: 'Luiz Silva',
   phoneNumber: '11-98763-1416',
   address: {
     street: 'Rua das Flores',
@@ -30,7 +30,7 @@ const order = {
     }
   },
   payment: {
-    total: 60,
+    total: 49.99,
   },
 };
 
@@ -38,9 +38,19 @@ const customerInfo = (order) => `Olá ${order.order.delivery.deliveryPerson}, en
 customerInfo(order);
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-
+  const pizza = Object.keys(order.order.pizza)
+  let pizzaStr = ''
+  for (const str of pizza) {
+    pizzaStr += ` ${str},`
+  }
+  const drinks = Object.values(order.order.drinks)
+  let drinkStr = ''
+  for (const index in drinks) {
+    drinkStr += ` ${drinks[index].type},`
+  }
+  const custo = order.payment.total.toString().replace('.',',')
+  return `Olá ${order.name}, o total do seu pedido de${pizzaStr.replace(/,$/,'')} e${drinkStr.replace(/,$/,'')} é de R$ ${custo}.`
 }
 
-orderModifier(order);
-console.log(customerInfo(order))
+console.log(orderModifier(order));
+//console.log(customerInfo(order))
