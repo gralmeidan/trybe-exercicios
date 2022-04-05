@@ -29,8 +29,22 @@ describe('Verifica se a função myRemove funciona corretamente', () => {
   });
 });
 
-/*
-Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
-Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
-Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
-*/
+const { myFizzBuzz } = require('./script');
+
+describe('Verifica se a função myFizzBuzz funciona corretamente', () => {
+  test('Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(3 * 5)).toBe('fizzbuzz');
+  });
+  test('Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(3)).toBe('fizz');
+  });
+  test('Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(5)).toBe('buzz');
+  });
+  test('Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(7)).toBe(7);
+  });
+  test('Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz('str')).toBeFalsy();
+  });
+});
