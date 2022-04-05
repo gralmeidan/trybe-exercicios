@@ -37,4 +37,16 @@ function decode(str) {
   );
 }
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+function techList(arr, name) {
+  let list = [];
+  if (arr.length === 0) return 'Vazio!';
+  for (const value of arr.sort()) {
+    list.push({
+      tech: value,
+      name,
+    });
+  }
+  return list;
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList };
