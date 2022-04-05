@@ -135,3 +135,27 @@ describe('Testa a função hydrate', () => {
     expect(hydrate('4 caipirinhas e 2 cervejas')).toBe('6 copos de água');
   });
 });
+
+const { searchEmployee } = require('./script');
+
+describe('Teste se a função searchEmployee está funcionando corretamente', () => {
+  test('Testa se searchEmployee é uma função', () => {
+    expect(typeof searchEmployee).toBe('function');
+  });
+  test('Testa se a função retorna um erro ao receber um valor de tipo não esperado', () => {
+    expect(() => searchEmployee(85796, 'firstname')).toThrow();
+    expect(() => searchEmployee('8579-6', {})).toThrow();
+  });
+  test('Testa se a função retorna erro ao receber um id não existente', () => {
+    expect(() => searchEmployee('123456', 'firstname')).toThrowError(
+      'ID não identificada'
+    );
+  });
+  test('Testa se a função retorna os valores esperados', () => {
+    expect(searchEmployee('8579-6', 'firstName')).toBe('firstName: Ana');
+    expect(searchEmployee('5569-4', 'lastName')).toBe('lastName: Jobs');
+    expect(searchEmployee('4456-4', 'specialities')).toBe(
+      'specialities: Context API, RTL, Bootstrap'
+    );
+  });
+});
