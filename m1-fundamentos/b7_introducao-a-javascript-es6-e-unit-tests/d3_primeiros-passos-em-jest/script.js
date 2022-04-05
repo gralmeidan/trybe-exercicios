@@ -49,4 +49,20 @@ function techList(arr, name) {
   return list;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList };
+function hydrate(str) {
+  let sum = 0;
+  for (const num of str.match(/\d/g)) {
+    sum += parseInt(num);
+  }
+  return `${sum} copo${sum !== 1 ? 's' : ''} de água`;
+}
+
+module.exports = {
+  sum,
+  myRemove,
+  myFizzBuzz,
+  encode,
+  decode,
+  techList,
+  hydrate,
+};
