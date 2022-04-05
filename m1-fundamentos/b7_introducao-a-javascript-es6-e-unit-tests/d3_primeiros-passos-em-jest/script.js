@@ -24,4 +24,17 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz } 
+function encode(str) {
+  return str.replace(
+    /(a|e|i|o|u)/g,
+    (match) => ['a', 'e', 'i', 'o', 'u'].indexOf(match) + 1
+  );
+}
+function decode(str) {
+  return str.replace(
+    /(1|2|3|4|5)/g,
+    (match) => ['a', 'e', 'i', 'o', 'u'][match - 1]
+  );
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
