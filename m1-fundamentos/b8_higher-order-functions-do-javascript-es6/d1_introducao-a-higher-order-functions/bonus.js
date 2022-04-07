@@ -5,19 +5,17 @@ const mage = {
   intelligence: 45,
   mana: 125,
   damage: function () {
-    let spentMana, dano;
     if (this.mana < 15) {
-      spentMana = 0;
-      dano = 'Não possui mana suficiente';
+      return {
+        spentMana: 0,
+        dano: 'Não possui mana suficiente',
+      };
     } else {
-      spentMana = 15;
-      this.mana -= 15;
-      dano = rand(this.intelligence, this.intelligence * 2);
+      return {
+        spentMana: 15,
+        dano: rand(this.intelligence, this.intelligence * 2),
+      };
     }
-    return {
-      dano,
-      spentMana,
-    };
   },
 };
 
@@ -39,3 +37,20 @@ const dragon = {
 };
 
 const battleMembers = { mage, warrior, dragon };
+
+const gameActions = {
+  warriorTurn: function (damage) {
+    dragon.healthPoints -= damage();
+  },
+  mageTurn: function (damage) {
+    let attack = damage();
+    dragon.healthPoints -= attack.dano;
+    mage.mana -= attack.spentMana;
+  },
+  dragonTurn: function (damage) {
+    let dano = damage();
+    mage.healthPoints -= dano;
+    warrior.healthPoints -= dano;
+  },
+  getMembers: () => battleMembers,
+};
