@@ -21,4 +21,23 @@ const sorteio = (num, areEqual) => {
   return areEqual(result, num) ? 'Parabéns você ganhou' : 'Tente novamente';
 };
 
-console.log(sorteio(3, checkStrictEquality))
+// console.log(sorteio(3, checkStrictEquality))
+// Requisito 3
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswer = (x, y) => {
+  if (x === 'N.A' || y === 'N.A') return 0;
+  return x === y ? 1 : -0.5;
+};
+
+Array.prototype.countEqualTo = function (arr, areEqual) {
+  let count = 0.0;
+  this.forEach((value, i) => (count += areEqual(value, arr[i])));
+  return count;
+};
+
+console.log(
+  `Nota final: ${RIGHT_ANSWERS.countEqualTo(STUDENT_ANSWERS, checkAnswer)}`
+);
