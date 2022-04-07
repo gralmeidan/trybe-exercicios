@@ -13,3 +13,12 @@ const newEmployees = (constructor) => ({
 
 // console.log(newEmployees(newEmployee));
 // Requisito 2
+
+const checkStrictEquality = (x, y) => x === y;
+
+const sorteio = (num, areEqual) => {
+  const result = Math.floor(Math.random() * 5) + 1;
+  return areEqual(result, num) ? 'Parabéns você ganhou' : 'Tente novamente';
+};
+
+console.log(sorteio(3, checkStrictEquality))
