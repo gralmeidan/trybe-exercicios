@@ -12,5 +12,7 @@ const expectedResult = {
 };
 
 function getNamedBook() {
-  // escreva seu código aqui
+  return arr.find(b => b.name.length === 26)
 }
+
+console.log(getNamedBook());
