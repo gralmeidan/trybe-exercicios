@@ -1,9 +1,11 @@
 const arr = require('./books');
 
 function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
+  let nameBook = arr[0].name;
+  arr.forEach((b) => {
+    if (b.name.length < nameBook.length) nameBook = b.name;
+  });
   return nameBook;
 }
+
+console.log(smallerName());
