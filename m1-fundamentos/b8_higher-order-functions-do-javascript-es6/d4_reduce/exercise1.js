@@ -5,5 +5,7 @@ const arrays = [
 ];
 
 function flatten() {
-  // escreva seu código aqui
+  return arrays.reduce((result, num) => [...num, ...result], [])  
 }
+
+console.log(flatten());
