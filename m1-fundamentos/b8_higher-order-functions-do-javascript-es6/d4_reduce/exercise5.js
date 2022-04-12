@@ -1,5 +1,3 @@
-const arr = require('./books');
-
 const names = [
   'Aanemarie', 'Adervandes', 'Akifusa',
   'Abegildo', 'Adicellia', 'Aladonata',
@@ -7,5 +5,7 @@ const names = [
 ];
 
 function containsA() {
-  // escreva seu código aqui
+  return names.reduce((count, name) => count + name.match(/a/ig).length, 0)
 }
+
+console.log(containsA());

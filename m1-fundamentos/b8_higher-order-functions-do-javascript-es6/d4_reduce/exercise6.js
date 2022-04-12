@@ -1,9 +1,13 @@
 const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
+const average = i => grades[i].reduce((sum, num) => sum + num) / grades[i].length
+
 function studentAverage() {
-  // escreva seu código aqui
+  return students.map((name, index) => ({ name, average: average(index)}))
 }
+
+console.log(studentAverage());
 
 const expected = [
   { name: 'Pedro Henrique', average: 7.8 },

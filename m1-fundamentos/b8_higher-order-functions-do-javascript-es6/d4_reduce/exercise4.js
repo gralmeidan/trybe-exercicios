@@ -11,6 +11,11 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
+const callback = (bigger, book) =>
+  bigger.name.length < book.name.length ? book : bigger;
+
 function longestNamedBook() {
-  // escreva seu código aqui
+  return arr.reduce(callback);
 }
+
+console.log(longestNamedBook());
