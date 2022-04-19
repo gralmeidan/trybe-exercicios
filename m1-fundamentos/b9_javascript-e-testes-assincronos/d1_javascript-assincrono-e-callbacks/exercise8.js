@@ -31,7 +31,13 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails();
+getPokemonDetails(({name}) => name === 'Squirtle', (err, info) => {
+  if (err instanceof Error) {
+    console.log(`Erro ao buscar informações do pokemon: ${err.message}`);
+  } else {
+    console.log(info);
+  }
+});
 
 module.exports = {
   getPokemonDetails,
