@@ -7,9 +7,11 @@ const fetchJoke = () => {
     headers: { Accept: 'application/json' },
   };
 
+  const jokeContainer = document.getElementById('jokeContainer')
+
   fetch(API_URL, myObject)
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => jokeContainer.innerText = data.joke);
 };
 
 window.onload = () => fetchJoke();
