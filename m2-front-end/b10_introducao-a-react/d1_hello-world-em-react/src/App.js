@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
-const compromissos = [
-  'Lorem',
-  'Ipsum',
-  'Dolor',
-  'Sit',
-  'Amet'
-]
-
-const Task = (value) => {
-  return (
-    <li>{value}</li>
-  )
-}
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 
 function App() {
-  return compromissos.map(value => Task(value));
+  return (
+  <div>
+    <Header/>
+    <Content/>
+    <Footer/>
+  </div>
+  );
 }
 
 export default App;

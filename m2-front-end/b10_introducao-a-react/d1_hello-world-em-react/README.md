@@ -69,12 +69,3 @@ Bloco: `Bloco do Conteúdo`
   * A classe Footer deve renderizar uma tag h1 com o texto "E isso é só o começo...". Não esqueça de exportar o componente criado.
   * Importe o componente Footer no app.js
   * Renderize o componente Footer no app.js.
-
-4. 🚀 **Bônus** Estilize a aplicação do exercicio 3. Para isso, adicione classes para estilização dos seus componentes de forma que cada conteúdo listado seja um Card.
-    * Para adicionar uma classe de estilização em um elemento HTML, utilize o atributo className:
-
-```jsx
-<footer className='footer'>
-  ...
-</footer>
-```
