@@ -1,11 +1,10 @@
-import pokemons from './data'
-import Card from './card'
+import Pokedex from "./pokedex";
 
 function App() {
   return (
     <div>
       <h1>Pokedex</h1>
-      {pokemons.map((poke) => <Card pokemon={poke} key={poke.id} />)}
+      <Pokedex/>
     </div>
   );
 }
