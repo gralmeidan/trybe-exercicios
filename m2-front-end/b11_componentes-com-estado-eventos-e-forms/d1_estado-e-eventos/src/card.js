@@ -15,6 +15,7 @@ const Card = ({
   bg-white m-3 py-4 content-around min-w-fit flex-grow basis-1"
     href={moreInfo}
     target="_blank"
+    rel="noreferrer"
   >
     <div className="text-center flex flex-col justify-center">
       <p>{name}</p>
