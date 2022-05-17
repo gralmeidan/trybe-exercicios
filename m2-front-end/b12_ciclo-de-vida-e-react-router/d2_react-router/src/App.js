@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Info from "./Info";
 import Pokedex from "./pokedex";
 import About from "./About";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Switch>
           <Route path="/pokemons/:id" component={Info}></Route>
           <Route path="/about" component={About}></Route>
-          <Route path="/" component={Pokedex}></Route>
+          <Route exact path="/" component={Pokedex}></Route>
+          <Route path="*" component={NotFound}></Route>
         </Switch>
       </div>
     </BrowserRouter>
