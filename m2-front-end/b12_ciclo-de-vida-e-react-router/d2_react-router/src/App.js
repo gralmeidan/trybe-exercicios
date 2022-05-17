@@ -1,11 +1,16 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Pokedex from "./pokedex";
 
 function App() {
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <Pokedex/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <h1>Pokedex</h1>
+        <Switch>
+          <Route path="/" component={Pokedex}></Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
