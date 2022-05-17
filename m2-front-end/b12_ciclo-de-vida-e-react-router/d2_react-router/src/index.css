@@ -18,7 +18,7 @@ img {
 }
 
 h1 {
-  @apply text-4xl font-bold font-sans pl-5 text-white mt-5;
+  @apply text-4xl font-bold font-sans pl-5 text-white;
 }
 
 h2 {
@@ -28,4 +28,8 @@ h2 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+nav * {
+  @apply mx-2 text-center font-sans font-bold text-white hover:text-cyan-200 transition-colors;
 }
