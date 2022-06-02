@@ -42,3 +42,54 @@ describe('Testa a função randomNumber', () => {
   });
 
 })
+
+describe('Testa a função capitalize', () => {
+
+  it('Deve ter sua implementação modificada para o oposto', () => {
+    const capitalize = jest.fn()
+      .mockImplementation((str) => str.toLowerCase());
+
+    expect(capitalize('FOO')).toBe('foo');
+    expect(capitalize('BAR')).toBe('bar');
+    jest.restoreAllMocks()
+  })
+
+  it('Deve retornar uma string capitalizada', () => {
+    expect(service.capitalize('foo')).toBe('FOO');
+    expect(service.capitalize('bar')).toBe('BAR');
+  });
+})
+
+describe('Testa a função firstLetter', () => {
+  
+  it('Deve ter sua implementação modificada para o oposto', () => {
+    const firstLetter = jest.fn()
+      .mockImplementation((str) => str[str.length - 1]);
+
+    expect(firstLetter('foo')).toBe('o');
+    expect(firstLetter('bar')).toBe('r');
+    jest.restoreAllMocks()
+  })
+
+  it('Deve retornar a primeira letra de uma string', () => {
+    expect(service.firstLetter('foo')).toBe('f');
+    expect(service.firstLetter('bar')).toBe('b');
+  });
+})
+
+describe('Testa a função concatenate', () => {
+
+  it('Deve ter sua implementação modificada para receber mais strings', () => {
+    const concatenate = jest.fn()
+      .mockImplementation((...str) => str.reduce((prev, str) => `${prev}${str}`, ''));
+
+    expect(concatenate('f','o','o')).toBe('foo');
+    expect(concatenate('b','a','r')).toBe('bar');
+    jest.restoreAllMocks()
+  })
+
+  it('Deve concatenar duas strings', () => {
+    expect(service.concatenate('foo', 'bar')).toBe('foobar');
+    expect(service.concatenate('bar', 'foo')).toBe('barfoo');
+  });
+})
