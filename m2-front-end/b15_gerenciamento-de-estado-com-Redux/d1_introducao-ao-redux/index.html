@@ -31,6 +31,7 @@
       <p>Color: <span id="value">white</span></p>
       <button id="previous">Previous color</button>
       <button id="next">Next color</button>
+      <button id="random">Random color</button>
     </div>
     <script>
       const INITIAL_STATE = {
@@ -38,12 +39,12 @@
         index: 0,
       };
       const reducer = (state = INITIAL_STATE, action) => {
-        const { index, colors: { length } } = state
+        const { index, colors } = state
         switch (action.type) {
           case 'NEXT_COLOR':
             return {
               ...state,
-              index: index + 1 < length ? index + 1 : index,
+              index: index + 1 < colors.length ? index + 1 : index,
             }
           case 'PREVIOUS_COLOR':
           return {
@@ -52,6 +53,11 @@
             }
           case 'INITIAL_STATE':
             return INITIAL_STATE;
+          case 'RANDOM_COLOR':
+            return {
+              colors: [ ...colors, action.color ],
+              index: colors.length,
+            }
           default:
             return state;
         }
@@ -67,6 +73,37 @@
         const { index, colors } = store.getState()
         document.getElementById('value').innerHTML = colors[index];
         document.getElementById('container').style.backgroundColor = colors[index]
+      })
+      function criarCor() {
+        const oneChar = [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+        ];
+        let cor = "#";
+        const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+          cor += oneChar[aleatorio()];
+        }
+        return cor;
+      }
+      document.getElementById('random').addEventListener('click', () => {
+        store.dispatch({
+          type: 'RANDOM_COLOR',
+          color: criarCor(),
+        })
       })
     </script>
   </body>
