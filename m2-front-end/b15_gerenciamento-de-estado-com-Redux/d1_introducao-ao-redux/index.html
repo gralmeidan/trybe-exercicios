@@ -5,106 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
-    <style>
-      body {
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-
-      #container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      button {
-        height: 50px;
-        width: 200px;
-      }
-    </style>
   </head>
   <body>
     <div id="container">
-      <p>Color: <span id="value">white</span></p>
-      <button id="previous">Previous color</button>
-      <button id="next">Next color</button>
-      <button id="random">Random color</button>
+      <h1>Informações do primeiro Reducer:</h1>
+      <p>Nome: <span id="nome-1">Rodrigo</span></p>
+      <p>Sobrenome: <span id="sobrenome-1">Santos da Silva</span></p>
+      <p>Endereço: <span id="endereco-1">Rua Soldado Mathias, 765</span></p>
+      <p>Cidade: <span id="cidade-1">Belo Horizonte</span></p>
+    </div>
+    <div id="container">
+      <h1>Informações do segundo Reducer:</h1>
+      <p>Nome: <span id="nome-2">Bruna</span></p>
+      <p>Sobrenome: <span id="sobrenome-2">Santana Oliveira</span></p>
+      <p>Endereço: <span id="endereco-2">Rua Holanda, 332</span></p>
+      <p>Cidade: <span id="cidade-2">São Paulo</span></p>
     </div>
     <script>
-      const INITIAL_STATE = {
-        colors: ["white", "black", "red", "green", "blue", "yellow"],
-        index: 0,
+      const ESTADO_INICIAL_1 = {
+        nome: "Rodrigo",
+        sobrenome: "Santos da Silva",
+        endereco: "Rua Soldado Mathias, 765",
+        cidade: "Belo Horizonte",
       };
-      const reducer = (state = INITIAL_STATE, action) => {
-        const { index, colors } = state
+
+      const ESTADO_INICIAL_2 = {
+        nome: "Bruna",
+        sobrenome: "Santana Oliveira",
+        endereco: "Rua Holanda, 332",
+        cidade: "São Paulo",
+      };
+
+      const reducer1 = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
-          case 'NEXT_COLOR':
-            return {
-              ...state,
-              index: index + 1 < colors.length ? index + 1 : index,
-            }
-          case 'PREVIOUS_COLOR':
-          return {
-              ...state,
-              index: index - 1 > 0 ? index - 1 : index,
-            }
-          case 'INITIAL_STATE':
-            return INITIAL_STATE;
-          case 'RANDOM_COLOR':
-            return {
-              colors: [ ...colors, action.color ],
-              index: colors.length,
-            }
           default:
             return state;
         }
-      }
-      const store = Redux.createStore(reducer)
-      document.getElementById('next').addEventListener('click', () => {
-        store.dispatch({ type: 'NEXT_COLOR' })
-      })
-      document.getElementById('previous').addEventListener('click', () => {
-        store.dispatch({ type: 'PREVIOUS_COLOR' })
-      })
-      store.subscribe(() => {
-        const { index, colors } = store.getState()
-        document.getElementById('value').innerHTML = colors[index];
-        document.getElementById('container').style.backgroundColor = colors[index]
-      })
-      function criarCor() {
-        const oneChar = [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-        ];
-        let cor = "#";
-        const aleatorio = () => Math.floor(Math.random() * oneChar.length);
-        for (let i = 0; i < 6; i += 1) {
-          cor += oneChar[aleatorio()];
+      };
+
+      const reducer2 = (state = ESTADO_INICIAL_2, action) => {
+        switch (action.type) {
+          default:
+            return state;
         }
-        return cor;
-      }
-      document.getElementById('random').addEventListener('click', () => {
-        store.dispatch({
-          type: 'RANDOM_COLOR',
-          color: criarCor(),
-        })
-      })
+      };
     </script>
   </body>
 </html>
