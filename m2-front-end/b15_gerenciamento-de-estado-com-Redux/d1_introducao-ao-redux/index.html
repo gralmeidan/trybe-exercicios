@@ -36,35 +36,65 @@
         cidade: "São Paulo",
       };
 
-      reducerSwitch = (state, action) => {
+      const reducer1 = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
-          case 'CHANGE_NAME':
+          case 'CHANGE_NAME1':
             return {
               ...state,
               nome: action.nome,
-            }
-          case 'CHANGE_SURNAME':
-            return {
-              ...state,
-              sobrenome: action.sobrenome
+              sobrenome: action.sobrenome,
             }
           default:
             return state
         }
-      }
-
-      const reducer1 = (state = ESTADO_INICIAL_1, action) => {
-        return reducerSwitch(state, action)
       };
 
       const reducer2 = (state = ESTADO_INICIAL_2, action) => {
-        return reducerSwitch(state, action)
+        switch (action.type) {
+          case 'CHANGE_NAME2':
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome,
+            }
+          default:
+            return state
+        }
       };
       
       const reducers = Redux.combineReducers({ reducer1, reducer2 });
 
       const store = Redux.createStore(reducers);
 
+      window.onload = () => {
+        setTimeout(() => {
+          const { 
+            reducer1: { nome: n1, sobrenome: s1 }, 
+            reducer2: { nome: n2, sobrenome: s2, } 
+          } = store.getState()
+          store.dispatch({
+            type: 'CHANGE_NAME1',
+            nome: n2,
+            sobrenome: s2,
+          })
+          store.dispatch({
+            type: 'CHANGE_NAME2',
+            nome: n1,
+            sobrenome: s1,
+          })
+        }, 3000)
+      }
+
+      store.subscribe(() => {
+        const { 
+            reducer1: { nome: n1, sobrenome: s1 }, 
+            reducer2: { nome: n2, sobrenome: s2, } 
+          } = store.getState()
+        document.getElementById('nome-1').innerText = n1
+        document.getElementById('nome-2').innerText = n2
+        document.getElementById('sobrenome-1').innerText = s1
+        document.getElementById('sobrenome-2').innerText = s2
+      })
     </script>
   </body>
 </html>
