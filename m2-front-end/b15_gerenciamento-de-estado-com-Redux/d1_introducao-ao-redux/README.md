@@ -165,3 +165,30 @@ window.onload = () => {
 ```
 
 5. Adicione um store.subscribe() para atualizar as informações na página de acordo com o que temos armazenado na store. Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
+
+### Bônus 1
+
+Você irá fazer 13 exercícios propostos pelo site <code class="inline">freecodecamp</code>, com objetivo de consolidar seus conhecimentos acerca dos conceitos presentes no <strong><em>Redux</em></strong>.
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/define-an-action-creator" target="_blank" rel="noopener noreferrer">Definindo um <code class="inline">action creator</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/dispatch-an-action-event" target="_blank" rel="noopener noreferrer">Enviando uma <code class="inline">action</code> para um <code class="inline">reducer</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/handle-an-action-in-the-store" target="_blank" rel="noopener noreferrer">Criando um <code class="inline">Reducer</code> para receber e manipular uma <code class="inline">action</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/use-a-switch-statement-to-handle-multiple-actions" target="_blank" rel="noopener noreferrer">Criando um <code class="inline">reducer</code> que aceita <code class="inline">actions</code> de tipos distintos</a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/use-const-for-action-types/" target="_blank" rel="noopener noreferrer">Usando <code class="inline">const</code> para os <code class="inline">action types</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/register-a-store-listener" target="_blank" rel="noopener noreferrer">Registrando um <code class="inline">listener</code> para no <code class="inline">store</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/combine-multiple-reducers" target="_blank" rel="noopener noreferrer">Combinando múltiplos <code class="inline">reducers</code></a>
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/send-action-data-to-the-store" target="_blank" rel="noopener noreferrer">Enviando dados através das <code class="inline">actions</code></a>
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/write-a-counter-with-redux" target="_blank" rel="noopener noreferrer">Criando um contador com <strong><em>Redux</em></strong></a>
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/never-mutate-state" target="_blank" rel="noopener noreferrer">Por que nunca modificar um <code class="inline">state</code>?</a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/use-the-spread-operator-on-arrays" target="_blank" rel="noopener noreferrer">Utilizando o <code class="inline">spread operator</code> como ferramenta para manter a imutabilidade do <code class="inline">state</code></a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/remove-an-item-from-an-array" target="_blank" rel="noopener noreferrer">Removendo itens de um array preservando a imutabilidade</a>
+
+1.  <a class="external-link" href="https://www.freecodecamp.org/learn/front-end-libraries/redux/copy-an-object-with-object-assign" target="_blank" rel="noopener noreferrer">Trabalhando com <code class="inline">Object.assign</code></a>
