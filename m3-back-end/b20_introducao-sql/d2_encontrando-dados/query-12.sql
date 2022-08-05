@@ -1,0 +1,4 @@
+SELECT name
+FROM Projects
+ORDER BY hours DESC
+LIMIT 1;
