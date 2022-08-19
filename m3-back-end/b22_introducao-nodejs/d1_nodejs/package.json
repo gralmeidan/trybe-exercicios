@@ -4,7 +4,8 @@
   "description": "Hoje nós aprendemos à utilizar os comandos do npm para criar e gerenciar pacotes e dependências, como utilizar o node para executar scripts, como funcionam os sistemas por trás de módulos do Node, criar scripts simples com interação do usuário e à utilizar funções assíncronas e de leitura e escrita de arquivos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bmi": "node bmi.js"
   },
   "keywords": [],
   "author": "",
