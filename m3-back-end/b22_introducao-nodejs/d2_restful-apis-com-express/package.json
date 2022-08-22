@@ -1,0 +1,18 @@
+{
+  "name": "d2_restful-apis-com-express",
+  "version": "1.0.0",
+  "description": "Hoje nós aprendemos como usar o node e o Express para criar APIs robustas, assim como as regras gerais da arquitetura REST.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
