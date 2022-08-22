@@ -36,4 +36,24 @@ app.post('/myActivities', (req, res) => {
   res.status(200).json({ activity: newActivity });
 });
 
+app.put('/myActivities/:id', (req, res) => {
+  const { activity } = req.body;
+
+  if (!activity?.description && !activity?.status)
+    res.status(400).json({
+      message: 'No status or description provided',
+    });
+
+  for (let i = 0; i < activities.length; i++) {
+    if (activities[i].id == req.params.id) {
+      const newActivity = {
+        ...activities[i],
+        ...activity,
+      };
+      activities[i] = newActivity;
+      res.status(200).json({ newActivity });
+    }
+  }
+});
+
 module.exports = app;
