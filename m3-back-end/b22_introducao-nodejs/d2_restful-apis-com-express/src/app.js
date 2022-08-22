@@ -18,4 +18,22 @@ app.get('/filter/myActivities', (req, res) => {
   res.status(filtered ? 200 : 404).json({ activities: filtered });
 });
 
+app.post('/myActivities', (req, res) => {
+  const { activity: { status, description } = {} } = req.body;
+
+  if (!description || !status)
+    res.status(400).json({
+      message: 'No status or description provided',
+    });
+
+  const newActivity = {
+    id: activities.at(-1).id + 1,
+    description,
+    status,
+  };
+
+  activities.push(newActivity);
+  res.status(200).json({ activity: newActivity });
+});
+
 module.exports = app;
