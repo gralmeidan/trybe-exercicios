@@ -56,4 +56,13 @@ app.put('/myActivities/:id', (req, res) => {
   }
 });
 
+app.delete('/myActivities/:id', (req, res) => {
+  for (let i = 0; i < activities.length; i++) {
+    if (activities[i].id == req.params.id) {
+      const removed = activities.splice(i, 1);
+      res.status(200).json({ activity: removed });
+    }
+  }
+});
+
 module.exports = app;
