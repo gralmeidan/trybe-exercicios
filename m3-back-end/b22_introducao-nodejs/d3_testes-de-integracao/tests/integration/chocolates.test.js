@@ -19,3 +19,31 @@ describe('Testa o método GET em /chocolates/total', () => {
     });
   });
 });
+
+describe('Testa o método GET em /chocolates/search', () => {
+  it('Deve retornar os chocolates com o termo pesquisado', async () => {
+    const response = await chai.request(app).get('/chocolates/search?name=Mo');
+    const output = [
+      {
+        id: 3,
+        name: 'Mon Chéri',
+        brandId: 2,
+      },
+      {
+        id: 4,
+        name: 'Mounds',
+        brandId: 3,
+      },
+    ];
+
+    expect(response.status).to.equal(200);
+    expect(response.body).to.deep.equal(output);
+  });
+
+  it('Deve retornar status code 404 quando não encontrar nada', async () => {
+    const response = await chai.request(app).get('/chocolates/search?name=ZZZ');
+
+    expect(response.status).to.equal(404);
+    expect(response.body).to.deep.equal([]);
+  });
+});
