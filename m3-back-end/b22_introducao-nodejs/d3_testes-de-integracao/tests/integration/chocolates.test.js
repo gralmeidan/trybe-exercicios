@@ -50,7 +50,7 @@ describe('Testa o método GET em /chocolates/search', () => {
 
 describe('Testa o método PUT do endpoing /chocolates/:id', async () => {
   const reqBody = {
-    name: 'Mint Pretty God',
+    name: 'Mint Pretty Good',
     brandId: 2,
   };
 
@@ -58,7 +58,7 @@ describe('Testa o método PUT do endpoing /chocolates/:id', async () => {
     const response = await chai.request(app).put('/chocolates/1').send(reqBody);
     const output = {
       chocolate: {
-        id: 1,
+        id: '1',
         name: 'Mint Pretty Good',
         brandId: 2,
       },
