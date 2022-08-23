@@ -8,7 +8,7 @@ const app = require('../../src/app');
 const { expect } = chai;
 chai.use(chaiHttp);
 
-sinon.stub(fs.promises, 'readFile').resolves(data);
+sinon.stub(fs.promises, 'readFile').resolves(JSON.stringify(data));
 
 describe('Testa o método GET em /chocolates/total', () => {
   it('Deve retornar o total de chocolates com o status 200', async () => {
