@@ -47,3 +47,34 @@ describe('Testa o método GET em /chocolates/search', () => {
     expect(response.body).to.deep.equal([]);
   });
 });
+
+describe('Testa o método PUT do endpoing /chocolates/:id', async () => {
+  const reqBody = {
+    name: 'Mint Pretty God',
+    brandId: 2,
+  };
+
+  it('Deve atualizar o array de chocolates', async () => {
+    const response = await chai.request(app).put('/chocolates/1').send(reqBody);
+    const output = {
+      chocolate: {
+        id: 1,
+        name: 'Mint Pretty Good',
+        brandId: 2,
+      },
+    };
+
+    expect(response.status).to.equal(200);
+    expect(response.body).to.deep.equal(output);
+  });
+
+  it('Deve retornar o status code 404 caso o id não exista', async () => {
+    const response = await chai.request(app).put('/chocolates/9').send(reqBody);
+    const output = {
+      message: 'chocolate not found',
+    };
+
+    expect(response.status).to.equal(404);
+    expect(response.body).to.deep.equal(output);
+  });
+});
