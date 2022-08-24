@@ -67,10 +67,24 @@ const validateRating = (req, res, next) => {
   next();
 };
 
+const validateDifficulty = (req, res, next) => {
+  const {
+    description: { createdAt },
+  } = req.body;
+
+  if (!createdAt.match(/^(Fácil)|(Médio)|(Difícil)$/))
+    return res.status(400).json({
+      message: "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'",
+    });
+
+  next();
+};
+
 module.exports = {
   validateName,
   validatePrice,
   validateDescription,
   validateCreatedAt,
   validateRating,
+  validateDifficulty,
 };
