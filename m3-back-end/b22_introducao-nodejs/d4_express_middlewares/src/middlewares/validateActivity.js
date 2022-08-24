@@ -41,8 +41,22 @@ const validateDescription = (req, res, next) => {
   next();
 };
 
+const validateCreatedAt = (req, res, next) => {
+  const {
+    description: { createdAt },
+  } = req.body;
+
+  if (!createdAt.match(/^(\d\d\/){2}\d{4}$/))
+    return res.status(400).json({
+      message: "O campo createdAt deve ter o formato 'dd/mm/aaaa'",
+    });
+
+  next();
+};
+
 module.exports = {
   validateName,
   validatePrice,
   validateDescription,
+  validateCreatedAt,
 };
