@@ -1,9 +1,13 @@
 const express = require('express');
-const { validateName } = require('../middlewares/validateActivity');
+const {
+  validateName,
+  validatePrice,
+} = require('../middlewares/validateActivity');
 const appendData = require('../utils/appendData');
 const activities = express.Router();
 
 activities.use(validateName);
+activities.use(validatePrice);
 
 activities.post('/', async (req, res) => {
   const { body } = req;
