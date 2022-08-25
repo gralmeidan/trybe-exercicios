@@ -6,6 +6,7 @@ const {
   validateCreatedAt,
   validateRating,
   validateDifficulty,
+  validateToken,
 } = require('../middlewares/validateActivity');
 const appendData = require('../utils/appendData');
 const activities = express.Router();
@@ -16,6 +17,7 @@ activities.use(validateDescription);
 activities.use(validateCreatedAt);
 activities.use(validateRating);
 activities.use(validateDifficulty);
+activities.use(validateToken);
 
 activities.post('/', async (req, res) => {
   const { body } = req;

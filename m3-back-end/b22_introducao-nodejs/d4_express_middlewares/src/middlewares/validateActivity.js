@@ -1,3 +1,5 @@
+const getData = require('../utils/getData');
+
 const validateName = (req, res, next) => {
   const { name } = req.body;
   if (!name)
@@ -69,12 +71,26 @@ const validateRating = (req, res, next) => {
 
 const validateDifficulty = (req, res, next) => {
   const {
-    description: { createdAt },
+    description: { difficulty },
   } = req.body;
 
-  if (!createdAt.match(/^(Fácil)|(Médio)|(Difícil)$/))
+  if (!difficulty.match(/^(Fácil)|(Médio)|(Difícil)$/))
     return res.status(400).json({
       message: "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'",
+    });
+
+  next();
+};
+
+const validateToken = async (req, res, next) => {
+  const Authorization = req.header('Authorization');
+  const users = await getData('users');
+  if (
+    !users.some(({ token }) => token === Authorization) ||
+    Authorization.length !== 16
+  )
+    return res.status(401).json({
+      message: 'Token inválido',
     });
 
   next();
@@ -87,4 +103,5 @@ module.exports = {
   validateCreatedAt,
   validateRating,
   validateDifficulty,
+  validateToken,
 };
