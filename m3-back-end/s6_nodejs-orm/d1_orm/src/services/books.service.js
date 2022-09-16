@@ -19,8 +19,20 @@ async function create({ title, author, pageQuantity }) {
   return response;
 }
 
+async function update(id, { title, author, pageQuantity }) {
+  const entries = Object.entries({ title, author, pageQuantity });
+  const notUndefined = entries.filter(([_key, value]) => Boolean(value));
+  const [response] = await Book.update(Object.fromEntries(notUndefined), {
+    where: {
+      id,
+    },
+  });
+  return response;
+}
+
 module.exports = {
   getAll,
   findById,
   create,
+  update,
 };
