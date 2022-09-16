@@ -5,6 +5,18 @@ async function getAll(_req, res) {
   res.status(200).json(response);
 }
 
+async function findById(req, res) {
+  const { id } = req.params;
+  const response = await BooksService.findById(id);
+  if (!response) {
+    return res.status(404).json({
+      message: 'Book not found',
+    });
+  }
+  res.status(200).json(response);
+}
+
 module.exports = {
   getAll,
+  findById,
 };
