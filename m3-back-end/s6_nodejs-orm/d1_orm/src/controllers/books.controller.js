@@ -16,7 +16,13 @@ async function findById(req, res) {
   res.status(200).json(response);
 }
 
+async function create(req, res) {
+  const response = await BooksService.create(req.body);
+  res.status(201).json(response);
+}
+
 module.exports = {
   getAll,
   findById,
+  create,
 };

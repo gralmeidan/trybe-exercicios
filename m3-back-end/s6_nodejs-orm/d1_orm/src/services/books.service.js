@@ -10,7 +10,17 @@ async function findById(id) {
   return response;
 }
 
+async function create({ title, author, pageQuantity }) {
+  const response = await Book.create({
+    title,
+    author,
+    pageQuantity,
+  });
+  return response;
+}
+
 module.exports = {
   getAll,
   findById,
+  create,
 };
