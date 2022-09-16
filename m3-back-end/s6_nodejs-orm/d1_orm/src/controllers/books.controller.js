@@ -34,9 +34,23 @@ async function update(req, res) {
   });
 }
 
+async function remove(req, res) {
+  const { id } = req.params;
+  const response = await BooksService.remove(id);
+  if (!response) {
+    return res.status(404).json({
+      message: 'Book not found',
+    });
+  }
+  res.status(200).json({
+    message: 'Book removed',
+  });
+}
+
 module.exports = {
   getAll,
   findById,
   create,
   update,
+  remove,
 };

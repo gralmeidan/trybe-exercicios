@@ -30,9 +30,19 @@ async function update(id, { title, author, pageQuantity }) {
   return response;
 }
 
+async function remove(id) {
+  const response = await Book.destroy({
+    where: {
+      id,
+    },
+  });
+  return response;
+}
+
 module.exports = {
   getAll,
   findById,
   create,
   update,
+  remove,
 };
