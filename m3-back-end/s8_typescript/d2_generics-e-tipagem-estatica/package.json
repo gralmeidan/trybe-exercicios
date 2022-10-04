@@ -1,0 +1,15 @@
+{
+  "name": "d2_generics-e-tipagem-estatica",
+  "version": "1.0.0",
+  "description": "Hoje aprendemos algumas funções mais avançadas do TypeScript como Type Aliases, Classes, Type Assertion e Generics, e como utilizar TypeScript em conjunto com mysql2 e sequelize.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
