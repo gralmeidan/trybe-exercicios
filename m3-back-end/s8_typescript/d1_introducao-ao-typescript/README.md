@@ -1,4 +1,4 @@
-# Módulo 3, Seção 7, Dia 1 - Introdução ao TypeScript
+# Módulo 3, Seção 8, Dia 1 - Introdução ao TypeScript
 
 Hoje aprendemos sobre o que é TypeScript, suas notações de tipo básicas, como utiliza-las e como criar tipos customizados.
 
@@ -11,22 +11,22 @@ type Character = any;
 
 const characters: any = [
   {
-    nickname: "xKillerx",
-    class: "warrior",
+    nickname: 'xKillerx',
+    class: 'warrior',
     stats: { agi: 50, str: 100, int: 25, hp: 1000, mp: 300 },
-    createdAt: new Date("2003-10-1"),
+    createdAt: new Date('2003-10-1'),
   },
   {
-    nickname: "jainaProud",
-    class: "mage",
+    nickname: 'jainaProud',
+    class: 'mage',
     stats: { agi: 80, str: 40, int: 150, hp: 630, mp: 1100 },
-    createdAt: new Date("2003-10-2"),
+    createdAt: new Date('2003-10-2'),
   },
   {
-    nickname: "catIn",
-    class: "hunter",
+    nickname: 'catIn',
+    class: 'hunter',
     stats: { agi: 150, str: 90, int: 80, hp: 800, mp: 600 },
-    createdAt: new Date("2003-10-15"),
+    createdAt: new Date('2003-10-15'),
   },
 ];
 
