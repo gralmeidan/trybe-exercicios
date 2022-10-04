@@ -10,10 +10,11 @@ enum unidades {
 
 type unidade = keyof typeof unidades;
 
-export function convertCapacity(
-  value: number,
-  base: unidade,
-  res: unidade
-): number {
+export function convert(value: number, base: unidade, res: unidade): number {
   return (value * unidades[base]) / unidades[res];
 }
+
+export default {
+  unidades,
+  convert,
+};
