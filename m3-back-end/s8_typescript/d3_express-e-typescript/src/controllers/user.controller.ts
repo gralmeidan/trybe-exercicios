@@ -13,6 +13,18 @@ class UserController {
     const users = await this.service.getAll();
     res.status(StatusCodes.OK).json(users);
   };
+
+  public getById = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const user = await this.service.getById(id);
+
+    if (user) {
+      return res.status(StatusCodes.OK).json(user);
+    }
+    res.status(StatusCodes.NOT_FOUND).json({
+      message: 'User not found',
+    });
+  };
 }
 
 export default UserController;

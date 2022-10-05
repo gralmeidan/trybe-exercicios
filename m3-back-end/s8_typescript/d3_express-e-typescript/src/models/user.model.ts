@@ -1,4 +1,4 @@
-import { Pool } from 'mysql2/promise';
+import { Pool, RowDataPacket } from 'mysql2/promise';
 import User from '../interfaces/user.interface';
 
 class UserModel {
@@ -13,6 +13,14 @@ class UserModel {
       'SELECT id, name, email FROM Users'
     );
     return response as User[];
+  }
+
+  public async getById(id: number): Promise<User> {
+    const [[response]] = await this.connection.execute<RowDataPacket[]>(
+      'SELECT id, name, email from Users WHERE id = ?',
+      [id]
+    );
+    return response as User;
   }
 }
 
