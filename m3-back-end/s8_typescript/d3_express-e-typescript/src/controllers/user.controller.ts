@@ -31,6 +31,14 @@ class UserController {
 
     res.status(StatusCodes.CREATED).json({ insertId });
   };
+
+  public update = async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    await this.service.update(req.body, id);
+
+    res.status(StatusCodes.NO_CONTENT).send();
+  };
 }
 
 export default UserController;

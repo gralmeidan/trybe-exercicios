@@ -30,6 +30,22 @@ class UserModel {
     );
     return insertId;
   }
+
+  public async update(user: Partial<User>, id: string) {
+    const validFields = ['name', 'email', 'password'];
+    const toBeUpdated = Object.fromEntries(
+      Object.entries(user).filter(([key]) => validFields.includes(key))
+    );
+
+    const placeholders = Object.keys(toBeUpdated)
+      .map((key) => `${key}=?`)
+      .join(',');
+
+    await this.connection.execute(
+      `UPDATE Users SET ${placeholders} WHERE id = ?`,
+      [...Object.values(toBeUpdated), id]
+    );
+  }
 }
 
 export default UserModel;
