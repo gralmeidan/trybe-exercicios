@@ -11,4 +11,6 @@ userRouter.post('/', controller.create);
 
 userRouter.put('/:id', controller.update);
 
+userRouter.delete('/:id', controller.remove);
+
 export default userRouter;

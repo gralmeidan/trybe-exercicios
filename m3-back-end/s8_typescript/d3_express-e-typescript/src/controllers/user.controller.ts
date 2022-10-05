@@ -39,6 +39,14 @@ class UserController {
 
     res.status(StatusCodes.NO_CONTENT).send();
   };
+
+  public remove = async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    await this.service.remove(id);
+
+    res.status(StatusCodes.NO_CONTENT).send();
+  };
 }
 
 export default UserController;

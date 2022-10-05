@@ -46,6 +46,10 @@ class UserModel {
       [...Object.values(toBeUpdated), id]
     );
   }
+
+  public async remove(id: string) {
+    await this.connection.execute('DELETE FROM Users WHERE id = ?', [id]);
+  }
 }
 
 export default UserModel;

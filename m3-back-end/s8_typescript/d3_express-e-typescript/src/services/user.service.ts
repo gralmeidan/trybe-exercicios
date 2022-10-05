@@ -42,6 +42,10 @@ class UserService {
 
     await this.model.update(user, id);
   }
+
+  public async remove(id: string) {
+    await this.model.remove(id);
+  }
 }
 
 export default UserService;
