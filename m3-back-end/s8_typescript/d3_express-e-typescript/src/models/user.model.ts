@@ -1,4 +1,4 @@
-import { Pool, RowDataPacket } from 'mysql2/promise';
+import { OkPacket, Pool, RowDataPacket } from 'mysql2/promise';
 import User from '../interfaces/user.interface';
 
 class UserModel {
@@ -21,6 +21,14 @@ class UserModel {
       [id]
     );
     return response as User;
+  }
+
+  public async create(user: User): Promise<number> {
+    const [{ insertId }] = await this.connection.execute<OkPacket>(
+      'INSERT INTO Users (name, email, password) VALUES (?, ?, ?)',
+      [user.name, user.email, user.password]
+    );
+    return insertId;
   }
 }
 

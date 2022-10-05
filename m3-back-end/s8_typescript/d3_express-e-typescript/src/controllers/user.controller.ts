@@ -25,6 +25,12 @@ class UserController {
       message: 'User not found',
     });
   };
+
+  public create = async (req: Request, res: Response) => {
+    const insertId = await this.service.create(req.body);
+
+    res.status(StatusCodes.CREATED).json({ insertId });
+  };
 }
 
 export default UserController;

@@ -1,6 +1,9 @@
+import { StatusCodes } from 'http-status-codes';
+import RestError from '../errors/rest.error';
 import User from '../interfaces/user.interface';
 import connection from '../models/connection';
 import UserModel from '../models/user.model';
+import { newUserSchema } from './schemas/user.schema';
 
 class UserService {
   private model: UserModel;
@@ -17,6 +20,17 @@ class UserService {
   public async getById(id: string): Promise<User> {
     const user = await this.model.getById(Number(id));
     return user;
+  }
+
+  public async create(user: User): Promise<number> {
+    const { error } = newUserSchema.validate(user);
+
+    if (error) {
+      throw new RestError(error.message, StatusCodes.UNPROCESSABLE_ENTITY);
+    }
+
+    const response = await this.model.create(user);
+    return response;
   }
 }
 
