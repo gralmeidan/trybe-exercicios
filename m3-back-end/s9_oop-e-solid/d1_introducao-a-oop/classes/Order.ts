@@ -5,7 +5,7 @@ export default class Order {
   public client: Client;
   public products: Product[];
   public pagamento: string;
-  public desconto?: number;
+  public desconto: number;
 
   constructor(
     client: Client,
@@ -16,6 +16,11 @@ export default class Order {
     this.client = client;
     this.products = products;
     this.pagamento = pagamento;
-    this.desconto = desconto;
+    this.desconto = desconto || 0;
   }
+
+  public getTotal = () =>
+    this.products.reduce((sum, { price }) => sum + price, 0);
+
+  public getTotalWithDiscount = () => this.getTotal() * (1 - this.desconto);
 }
