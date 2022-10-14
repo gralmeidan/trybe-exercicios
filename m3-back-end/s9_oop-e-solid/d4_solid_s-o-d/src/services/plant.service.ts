@@ -12,4 +12,9 @@ export default class PlantService {
     const results = await this.model.getAll();
     return results;
   };
+
+  public findById = async (query: string): Promise<Plant> => {
+    const result = await this.model.findById(query);
+    return result;
+  };
 }

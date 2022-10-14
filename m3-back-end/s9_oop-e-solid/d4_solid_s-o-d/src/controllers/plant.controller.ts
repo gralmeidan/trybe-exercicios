@@ -13,4 +13,18 @@ export default class PlantController {
 
     res.status(200).json(response);
   };
+
+  public findById = async (req: Request, res: Response): Promise<void> => {
+    const { id } = req.params;
+
+    const response = await this.service.findById(id);
+
+    if (id) {
+      res.status(200).json(response);
+      return;
+    }
+    res.status(404).json({
+      message: 'Plant not found',
+    });
+  };
 }

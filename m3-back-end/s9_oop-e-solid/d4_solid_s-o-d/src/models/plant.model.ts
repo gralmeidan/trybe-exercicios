@@ -8,4 +8,9 @@ export default class PlantModel {
     const content = await readFile(this.pathToFile, 'utf-8');
     return JSON.parse(String(content));
   };
+
+  public findById = async (query: string): Promise<Plant> => {
+    const plants = await this.getAll();
+    return plants.filter(({ id }) => id === query)[0];
+  };
 }

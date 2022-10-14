@@ -12,5 +12,6 @@ const service = new PlantService(model);
 const controller = new PlantController(service);
 
 app.get('/plants', controller.getAll);
+app.get('/plant/:id', controller.findById);
 
 export default app;
