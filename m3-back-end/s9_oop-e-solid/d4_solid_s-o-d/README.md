@@ -14,11 +14,7 @@ Precisamos dos endpoints:
 
 - DELETE /plant/:id: deleta uma planta com o id;
 
-- POST /plant/:id: sobrescreve a planta com id;
-
-- POST /plant: cria uma planta nova;
-
-- GET /sunny/:id: retorna uma planta que precisa de sol com o id;
+- POST /plants: cria uma planta nova;
 
 ### Bônus
 

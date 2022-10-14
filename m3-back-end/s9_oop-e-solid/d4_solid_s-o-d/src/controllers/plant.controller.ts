@@ -35,4 +35,13 @@ export default class PlantController {
 
     res.status(204).send();
   };
+
+  public insert = async (req: Request, res: Response): Promise<void> => {
+    const id = await this.service.insert(req.body);
+
+    res.status(201).json({
+      ...req.body,
+      id,
+    });
+  };
 }

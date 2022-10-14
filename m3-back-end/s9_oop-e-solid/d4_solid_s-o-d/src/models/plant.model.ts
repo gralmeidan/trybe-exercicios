@@ -27,4 +27,9 @@ export default class PlantModel {
     const plants = await this.findByExcludeId(query);
     await this.writeToFile(plants);
   };
+
+  public insert = async (plant: Plant): Promise<void> => {
+    const plants = await this.getAll();
+    await this.writeToFile([...plants, plant]);
+  };
 }

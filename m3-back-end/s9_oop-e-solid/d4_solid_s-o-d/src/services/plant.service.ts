@@ -8,6 +8,8 @@ export default class PlantService {
     this.model = model;
   }
 
+  private generateId = () => new Date().toISOString();
+
   public getAll = async (): Promise<Plant[]> => {
     const results = await this.model.getAll();
     return results;
@@ -20,4 +22,12 @@ export default class PlantService {
 
   public remove = async (query: string): Promise<void> =>
     this.model.remove(query);
+
+  public insert = async (plant: Omit<Plant, 'id'>): Promise<string> => {
+    const id = this.generateId();
+
+    await this.model.insert({ ...plant, id });
+
+    return id;
+  };
 }

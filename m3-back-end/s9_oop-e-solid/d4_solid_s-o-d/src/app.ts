@@ -14,5 +14,6 @@ const controller = new PlantController(service);
 app.get('/plants', controller.getAll);
 app.get('/plant/:id', controller.findById);
 app.delete('/plant/:id', controller.remove);
+app.post('/plants', controller.insert);
 
 export default app;
