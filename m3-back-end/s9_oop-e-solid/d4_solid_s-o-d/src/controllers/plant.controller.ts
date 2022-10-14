@@ -19,12 +19,20 @@ export default class PlantController {
 
     const response = await this.service.findById(id);
 
-    if (id) {
+    if (response) {
       res.status(200).json(response);
       return;
     }
     res.status(404).json({
       message: 'Plant not found',
     });
+  };
+
+  public remove = async (req: Request, res: Response): Promise<void> => {
+    const { id } = req.params;
+
+    await this.service.remove(id);
+
+    res.status(204).send();
   };
 }

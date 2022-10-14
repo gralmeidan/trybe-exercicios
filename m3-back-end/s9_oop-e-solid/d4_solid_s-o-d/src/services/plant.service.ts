@@ -17,4 +17,7 @@ export default class PlantService {
     const result = await this.model.findById(query);
     return result;
   };
+
+  public remove = async (query: string): Promise<void> =>
+    this.model.remove(query);
 }
