@@ -1,0 +1,5 @@
+use('trybe')
+
+db.superheroes.deleteOne({
+  publisher: 'Sony Pictures'
+})

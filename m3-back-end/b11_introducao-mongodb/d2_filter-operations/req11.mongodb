@@ -1,0 +1,9 @@
+use('trybe')
+
+db.superheroes.find({
+  'aspects.hairColor': {
+    $not: {
+      $in: ['Black', 'No Hair']
+    }
+  }
+}).count()

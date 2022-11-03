@@ -1,0 +1,3 @@
+use('trybe')
+
+db.superheroes.findOne()
