@@ -1,0 +1,8 @@
+use('trybe')
+
+db.superheroes.find({
+  'aspects.height': {
+    $in: [180, 200]
+  },
+  publisher: 'Marvel Comics'
+})
