@@ -1,0 +1,13 @@
+use('class')
+
+db.movies.updateMany(
+  {},
+  {
+    $unset: {
+      budget: 0,
+      estimatedBudget: 0
+    }
+  }
+)
+
+db.movies.find({}, { _id: 0 })
