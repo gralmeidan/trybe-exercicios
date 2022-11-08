@@ -1,0 +1,26 @@
+use('cinema')
+
+db.movies.updateOne(
+  { 
+    title: 'Batman'
+  },
+  {
+    $push: {
+      'cast.$[el].actor': {
+        $each: [
+          'Michael Keaton', 
+          'Val Kilmer', 
+          'George Clooney'
+        ],
+        $sort: -1
+      }
+    }
+  },
+  {
+    arrayFilters: [
+      { 'el.character': 'Batman' }
+    ]
+  }
+)
+
+db.movies.find({}, { _id: 0 })

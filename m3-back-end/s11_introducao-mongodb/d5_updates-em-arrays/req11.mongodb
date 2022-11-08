@@ -1,0 +1,23 @@
+use('cinema')
+
+db.movies.updateOne(
+  { 
+    title: 'Batman'
+  },
+  {
+    $set: {
+      'cast.$[batman].actor': [ 'Christian Bale' ],
+      'cast.$[alfred].actor': [ 'Michael Caine' ],
+      'cast.$[joker].actor': [ 'Heath Ledger' ]
+    }
+  },
+  {
+    arrayFilters: [
+      { 'batman.character': 'Batman' },
+      { 'alfred.character': 'Alfred' },
+      { 'joker.character': 'Coringa' }
+    ]
+  }
+)
+
+db.movies.find({}, { _id: 0 })

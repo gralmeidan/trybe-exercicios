@@ -1,0 +1,24 @@
+use('cinema')
+
+db.movies.updateOne(
+  { 
+    title: 'Batman'
+  },
+  {
+    $set: {
+      cast: [
+        {
+          character: "Batman"
+        },
+        {
+          character: "Alfred"
+        },
+        {
+          character: "Coringa"
+        }
+      ]
+    }
+  }
+)
+
+db.movies.find({}, { _id: 0 })
